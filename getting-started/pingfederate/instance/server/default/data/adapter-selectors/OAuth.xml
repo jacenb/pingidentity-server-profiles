@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:PluginConfiguration isInheritExtendedContractAttributes="false" name="OAuth" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
+    <urn:Fields>
+        <urn:Field name="address">false</urn:Field>
+        <urn:Field name="admin">false</urn:Field>
+        <urn:Field name="edit">false</urn:Field>
+        <urn:Field name="email">false</urn:Field>
+        <urn:Field name="oauth">true</urn:Field>
+        <urn:Field name="openid">false</urn:Field>
+        <urn:Field name="phone">false</urn:Field>
+        <urn:Field name="profile">false</urn:Field>
+        <urn:Field name="urn:pingidentity:directory-delegated-admin">false</urn:Field>
+    </urn:Fields>
+    <urn:AdvancedFields/>
+    <urn:Tables/>
+</urn:PluginConfiguration>

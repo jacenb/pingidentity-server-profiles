@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:AdapterConfiguration isInheritExtendedContractAttributes="false" name="SPREFID" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
+    <urn:Fields>
+        <urn:Field name="Authentication Endpoint"/>
+        <urn:Field name="User Name">spuser</urn:Field>
+        <urn:Field name="Pass Phrase">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoieXBRZnV4MUtyciIsInZlcnNpb24iOiI4LjQuNC4wIn0..8brRVczr-wGvtOzryWiuAw.-0SR4LDsbxU49GTiT0EY3Q.GcHiKFi5DS5ksb6QmMjRfA</urn:Field>
+        <urn:Field name="Allowed Subject DN"/>
+        <urn:Field name="Allowed Issuer DN"/>
+        <urn:Field name="Logout Service Endpoint"/>
+        <urn:Field name="Account Linking Authentication Endpoint"/>
+        <urn:Field name="Transport Mode">2</urn:Field>
+        <urn:Field name="Reference Duration">30</urn:Field>
+        <urn:Field name="Reference Length">30</urn:Field>
+        <urn:Field name="Require SSL/TLS">true</urn:Field>
+        <urn:Field name="Outgoing Attribute Format">JSON</urn:Field>
+        <urn:Field name="Incoming Attribute Format">JSON</urn:Field>
+        <urn:Field name="Logout Mode">FRONT</urn:Field>
+        <urn:Field name="Skip Host Name Validation ">false</urn:Field>
+    </urn:Fields>
+    <urn:AdvancedFields>
+        <urn:Field name="Transport Mode">2</urn:Field>
+        <urn:Field name="Reference Duration">30</urn:Field>
+        <urn:Field name="Reference Length">30</urn:Field>
+        <urn:Field name="Require SSL/TLS">true</urn:Field>
+        <urn:Field name="Outgoing Attribute Format">JSON</urn:Field>
+        <urn:Field name="Incoming Attribute Format">JSON</urn:Field>
+        <urn:Field name="Logout Mode">FRONT</urn:Field>
+        <urn:Field name="Skip Host Name Validation ">false</urn:Field>
+    </urn:AdvancedFields>
+    <urn:Tables/>
+    <urn:ExtendedContractAttributes>
+        <urn:AttributeName>name</urn:AttributeName>
+        <urn:AttributeName>groups</urn:AttributeName>
+        <urn:AttributeName>status</urn:AttributeName>
+    </urn:ExtendedContractAttributes>
+</urn:AdapterConfiguration>

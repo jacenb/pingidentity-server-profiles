@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:AdapterConfiguration isInheritExtendedContractAttributes="false" name="SPOTKAL" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
+    <urn:Fields>
+        <urn:Field name="Password">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoieXBRZnV4MUtyciIsInZlcnNpb24iOiI4LjQuNC4wIn0..vZACP40LN2C-U9uUjk65Dw.MwVWx7QXhyVS1sYHniXwRw.rauuT2B66t1wzbf81Z9vdg</urn:Field>
+        <urn:Field name="Confirm Password">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoieXBRZnV4MUtyciIsInZlcnNpb24iOiI4LjQuNC4wIn0..C6Bx6T5q1_qbxR5p8ciwmQ.iYbJk1ehlPvOCIFdcBOUxg.MCADF0rwAZdBazN3tVLJkA</urn:Field>
+        <urn:Field name="Transport Mode">2</urn:Field>
+        <urn:Field name="Token Name">opentoken</urn:Field>
+        <urn:Field name="Cipher Suite">2</urn:Field>
+        <urn:Field name="Authentication Service"/>
+        <urn:Field name="Account Link Service">https://sso.test-win4.com:9031/SpSample?cmd=accountlink</urn:Field>
+        <urn:Field name="Logout Service">https://sso.test-win4.com:9031/SpSample/?cmd=slo</urn:Field>
+        <urn:Field name="Cookie Domain"/>
+        <urn:Field name="Cookie Path">/</urn:Field>
+        <urn:Field name="Token Lifetime">300</urn:Field>
+        <urn:Field name="Session Lifetime">43200</urn:Field>
+        <urn:Field name="Not Before Tolerance">0</urn:Field>
+        <urn:Field name="Force SunJCE Provider">false</urn:Field>
+        <urn:Field name="Use Verbose Error Messages">false</urn:Field>
+        <urn:Field name="Obfuscate Password">true</urn:Field>
+        <urn:Field name="Session Cookie">false</urn:Field>
+        <urn:Field name="Secure Cookie">false</urn:Field>
+        <urn:Field name="HTTP Only Flag">true</urn:Field>
+        <urn:Field name="Send Subject as Query Parameter">false</urn:Field>
+        <urn:Field name="Subject Query Parameter                 "/>
+        <urn:Field name="Send Extended Attributes">0</urn:Field>
+        <urn:Field name="Skip Trimming of Trailing Backslashes">false</urn:Field>
+    </urn:Fields>
+    <urn:AdvancedFields>
+        <urn:Field name="Transport Mode">2</urn:Field>
+        <urn:Field name="Token Name">opentoken</urn:Field>
+        <urn:Field name="Cipher Suite">2</urn:Field>
+        <urn:Field name="Authentication Service"/>
+        <urn:Field name="Account Link Service">https://sso.test-win4.com:9031/SpSample?cmd=accountlink</urn:Field>
+        <urn:Field name="Logout Service">https://sso.test-win4.com:9031/SpSample/?cmd=slo</urn:Field>
+        <urn:Field name="Cookie Domain"/>
+        <urn:Field name="Cookie Path">/</urn:Field>
+        <urn:Field name="Token Lifetime">300</urn:Field>
+        <urn:Field name="Session Lifetime">43200</urn:Field>
+        <urn:Field name="Not Before Tolerance">0</urn:Field>
+        <urn:Field name="Force SunJCE Provider">false</urn:Field>
+        <urn:Field name="Use Verbose Error Messages">false</urn:Field>
+        <urn:Field name="Obfuscate Password">true</urn:Field>
+        <urn:Field name="Session Cookie">false</urn:Field>
+        <urn:Field name="Secure Cookie">false</urn:Field>
+        <urn:Field name="HTTP Only Flag">true</urn:Field>
+        <urn:Field name="Send Subject as Query Parameter">false</urn:Field>
+        <urn:Field name="Subject Query Parameter                 "/>
+        <urn:Field name="Send Extended Attributes">0</urn:Field>
+        <urn:Field name="Skip Trimming of Trailing Backslashes">false</urn:Field>
+    </urn:AdvancedFields>
+    <urn:Tables/>
+    <urn:ExtendedContractAttributes>
+        <urn:AttributeName>username</urn:AttributeName>
+    </urn:ExtendedContractAttributes>
+</urn:AdapterConfiguration>
