@@ -1,0 +1,128 @@
+/***************************************************************************
+* Copyright (C) 2012 Ping Identity Corporation
+* All rights reserved.
+*
+* The contents of this file are subject to the terms of the 
+* PingFederate Agentless Integration Kit Users Guide.
+*
+* This is the stylesheet for the Agentless Integration Kit Sample applications.
+*
+**************************************************************************/
+
+body
+{
+  margin: 0;
+  padding: 0;
+  font: normal 12px arial, helvetica, sans-serif;
+  color: #434343;
+  background-color: #F3F3F3;
+}
+
+h1
+{
+  color: #434343;
+  font: bold 22px arial, helvetica, sans-serif;
+}
+
+a
+{
+  font-weight: bold;
+}
+
+a:link, a:visited 
+{
+  color: #0199B2;
+  text-decoration: none;
+}
+
+a:hover 
+{
+  color: #7CCDE2;
+}
+
+.width
+{
+  width: 640px;
+  margin: 25px auto 0 auto;
+  background-color: #FFF;
+  border: none;
+  box-shadow:0 0 6px 0 rgba(0,0,0,.4);
+  -moz-box-shadow: 0 0 6px 0 rgba(0,0,0,.4);
+  -webkit-box-shadow: 0 0 6px 0 rgba(0,0,0,.4);
+
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius:15px;
+}
+
+.mainbody
+{
+  text-align: center;
+  color: #434343;
+  padding: 25px 25px 25px 25px;
+  background-color:none;
+  margin-top:-10px;
+}
+
+.header
+{
+  text-align: center;
+  font: normal 24px arial, helvetica, sans-serif;
+  padding: 25px 25px 25px 25px;
+  background-color: none;
+  border-bottom: 1px dashed #AAAAAA;
+}
+
+.idp
+{
+  color: #CC0000;
+  font: bold 24px arial, helvetica, sans-serif;
+}
+
+.sp
+{
+  color: #0077CC;
+  font: bold 24px arial, helvetica, sans-serif;
+}
+
+.info
+{
+  text-align: left;
+  background: #FFFFAA;
+  padding: 10px;
+  margin: 0px 0px 25px 0px;
+  border-color: #BBBB00;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.error
+{
+  text-align: left;
+  background: #FFAAAA;
+  padding: 10px;
+  border-color: #BB0000;
+  border-style: solid;
+  border-width: 1px;
+}
+
+table
+{
+  width: 100%;
+  border-collapse: collapse;
+  font: normal 11px arial, helvetica, sans-serif;
+  color: #363636;
+  background: #ECECEC;
+  text-align: left;
+}
+
+table th
+{
+  padding:5px;
+}
+
+table td 
+{
+  padding:5px;
+  background: #F6F6F6;
+}

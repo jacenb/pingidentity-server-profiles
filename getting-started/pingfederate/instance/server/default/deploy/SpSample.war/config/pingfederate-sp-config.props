@@ -1,0 +1,10 @@
+#Config
+#Wed Oct 04 10:59:11 MDT 2017
+hostPF=sso.test-win4.com
+useSSL=true
+httpPort=9030
+httpsPort=9031
+contextPathPF=/
+wsUname=heuristics
+wsPwd=Changeme1
+attributeNamesList=password|authnContext

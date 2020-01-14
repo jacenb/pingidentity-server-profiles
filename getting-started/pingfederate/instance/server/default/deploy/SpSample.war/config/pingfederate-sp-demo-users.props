@@ -1,0 +1,8 @@
+# This file defines values for user attributes.
+# [user]=[pass]|[attr1]|[attr2]|[attr3]
+# joe=test|urn:oasis:names:tc:SAML:2.0:ac:classes:unspecified|joe_value1|joe_value2|joe_value3
+# sarah=test|urn:oasis:names:tc:SAML:2.0:ac:classes:unspecified|sarah_value1|sarah_value2|sarah_value3
+# test=test|urn:oasis:names:tc:SAML:2.0:ac:classes:unspecified|sp_value1|sp_value2|sp_value3
+7b5d3c15-b020-4628-8813-d117f8ec825e=Pacers!3|urn:oasis:names:tc:SAML:2.0:ac:classes:unspecified|Jason|Test|jasontest@sso.test-win4.com
+5d2a2b6b-18c2-47c8-a84b-9078de87ae54=Pacers!8|urn:oasis:names:tc:SAML:2.0:ac:classes:unspecified|Peyton|Manning|colts18@sso.test-win4.com
+e3fa14a8-833d-40a3-abaf-7adde6e089dd=Pacers!8|urn:oasis:names:tc:SAML:2.0:ac:classes:unspecified|Reggie|Wayne|colts87@sso.test-win4.com
