@@ -1,5 +1,5 @@
 define suffix=${USER_BASE_DN}
-define maildomain=example.com
+define maildomain=pdtrain.com
 define numusers=${MAKELDIF_USERS}
 
 branch: ou=benchy,[suffix]
