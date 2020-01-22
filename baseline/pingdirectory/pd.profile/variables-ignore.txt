@@ -2,4 +2,3 @@
 # any variables substituted by the manage-profile tool.
 
 misc-files/README
-server-root/pre-setup/webapps/delegator/set-up-delegator.sh
