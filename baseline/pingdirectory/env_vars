@@ -1,12 +1,12 @@
 #
 # NOTICE: the values in this file will override the values provided to the container
-#         
+#
 #         if that is not the intent, and a default value should be set instead
 #         use a syntax like:
 #            MY_ENVIRONMENT_VARIABLE_0=${MY_ENVIRONMENT_VARIABLE_0:=myDefaultValue}
 #                or
 #            MY_ENVIRONMENT_VARIABLE_1=${MY_ENVIRONMENT_VARIABLE_1:-wasNotSetElsewhere}
-#         
+#
 #         Also be aware that many of these variable have default values set in the Docker image.
 #         If that is the case the variable is never not set, you may have to override the value
 
@@ -14,7 +14,7 @@
 #LOCATION=Docker
 
 # The root user may be provided (Default: cn=directory manager)
-#ROOT_USER_DN=cn=administrator
+ROOT_USER_DN=cn=dmanager
 
 # The path to the root user password file
 # This does not necessarily need to be passed in to the container
@@ -30,7 +30,7 @@ ROOT_USER_PASSWORD_FILE=${BASE}/staging/pwd
 ADMIN_USER_PASSWORD_FILE=${ROOT_USER_PASSWORD_FILE}
 
 # The user base dn may be provided (Default: dc=example,dc=com)
-# USER_BASE_DN=dc=yourCompanyName,dc=com
+USER_BASE_DN=dc=pdtrain,dc=com
 
 # The Java heap size may be provided
 # MAX_HEAP_SIZE=384m
