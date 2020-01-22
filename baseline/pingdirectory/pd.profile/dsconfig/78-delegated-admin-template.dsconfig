@@ -38,9 +38,9 @@ dsconfig create-delegated-admin-attribute --type-name groups --attribute-type de
 #          Consult the PingDirectory and PingData Security Guide for more information about configuring Trust Manager Providers.
 #
 dsconfig set-trust-manager-provider-prop --provider-name "Blind Trust" --set enabled:true
-dsconfig create-external-server --server-name "PingFederateInstance" --type "http" --set "base-url:https://${pingfedbaseurl}" --set "hostname-verification-method:allow-all" --set "trust-manager-provider:Blind Trust"
+dsconfig create-external-server --server-name "PingFederateInstance" --type "http" --set "base-url:https://pingfederate-${PING_IDENTITY_K8S_NAMESPACE}.ping-devops.com" --set "hostname-verification-method:allow-all" --set "trust-manager-provider:Blind Trust"
 dsconfig create-identity-mapper --mapper-name "entryUUIDMatch" --type "exact-match" --set enabled:true --set "match-attribute:entryUUID" --set "match-base-dn:${USER_BASE_DN}"
-dsconfig create-access-token-validator --validator-name "PingFederateValidator" --type "ping-federate" --set enabled:true --set "identity-mapper:entryUUIDMatch" --set "subject-claim-name:sub" --set "authorization-server:PingFederateInstance" --set "client-id:${pingfedclientid_ds}" --set "client-secret:${pingfedclientsecret}"
+dsconfig create-access-token-validator --validator-name "PingFederateValidator" --type "ping-federate" --set enabled:true --set "identity-mapper:entryUUIDMatch" --set "subject-claim-name:sub" --set "authorization-server:PingFederateInstance" --set "client-id:pingdirectory" --set "client-secret:Pacers3!"
 
 #
 # Complete the configuration of the Delegated Admin API.
