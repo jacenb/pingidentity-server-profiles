@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urn:OpenIdConnectProviderPolicy enabled="true" defaultPolicyGroupId="PA-WAM" trackUserSessionsForLogout="true" xmlns:urn="urn:pingidentity.com:pf:openid:connect:idp:policy">
+<urn:OpenIdConnectProviderPolicy enabled="true" defaultPolicyGroupId="PA-WAM" trackUserSessionsForLogout="false" xmlns:urn="urn:pingidentity.com:pf:openid:connect:idp:policy">
     <urn:ProviderPolicyGroup policyId="PA-WAM" idTokenLife="5" includeSriInIdToken="true" includeUserInfoInIdToken="true" policyName="PA-WAM" accessTokenManagerId="default">
         <urn:UserInfoMapping>
             <urn1:AttributeMap Name="firstName" Type="Text" Value="Jason" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>

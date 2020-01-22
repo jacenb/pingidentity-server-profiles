@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urn:AccessTokenManagerConfiguration inheritAccessControlSettings="false" inheritSelectionSettings="false" inheritSessionValidationSettings="false" restrictClients="false" checkSessionRevocationStatus="false" checkValidAuthnSession="false" updateAuthnSessionActivity="false" isInheritExtendedContractAttributes="false" name="JSON Web Tokens" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
     <urn:Fields>
-        <urn:Field name="Token Lifetime">60</urn:Field>
+        <urn:Field name="Token Lifetime">120</urn:Field>
         <urn:Field name="JWS Algorithm">RS256</urn:Field>
         <urn:Field name="Active Symmetric Key ID"/>
         <urn:Field name="Active Signing Certificate Key ID">k2</urn:Field>
@@ -49,7 +49,7 @@
         <urn:Table name="Symmetric Keys">
             <urn:Row>
                 <urn:Field name="Key ID">k1</urn:Field>
-                <urn:Field name="Key">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoieXBRZnV4MUtyciIsInZlcnNpb24iOiI4LjQuNC4wIn0..-BzuaOoghAaYcIVFxgt_gw.Or8MxlH7JTEIrCdrcvfzXJyeKRE9GQohMs3xxcV-ZIDE6kW9hN9LvlXEvOVlu03z.bbtDn9-Jd9M3zOqb3-JUkg</urn:Field>
+                <urn:Field name="Key">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoieXBRZnV4MUtyciIsInZlcnNpb24iOiI4LjQuNC4wIn0..3IFInSzDJnWnuYJM3COH6Q.a2If7nI-xiZ8UKGhJOVCtTvRP2bklMXEt0Wm1FwTqADIaQoTKWmBdosnvWoonzPL.ArlTCgpwN6wVRcDubX4hNA</urn:Field>
                 <urn:Field name="Encoding">b64u</urn:Field>
             </urn:Row>
         </urn:Table>

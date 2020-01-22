@@ -35,7 +35,6 @@
                 </sid:SPLocalPaths>
             </sid:LocalPathsDescriptor>
             <sid:ApplicationURLs>
-                <sid:URLGroup name="idp.after.slo" successURL="https://localhost:9031/IdpSample/"/>
                 <sid:URLGroup name="sp.after.slo" successURL="https://sso.test-win4.com:9031/SpSample/MainPage/"/>
                 <sid:URLGroup name="sp.after.sso" successURL="https://sso.test-win4.com:9031/SpSample/MainPage/"/>
             </sid:ApplicationURLs>
