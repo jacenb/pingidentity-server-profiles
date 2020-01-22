@@ -8,8 +8,8 @@
 # objectClass: organizationalUnit
 # ou: applications
 
-dn: uid=testApplication,ou=applications,dc=pdtrain,dc=com
+dn: cn=testApplication,ou=applications,dc=pdtrain,dc=com
 objectClass: top
 objectClass: organizationalUnit
 ou: applications
-uid: testApplication
+cn: testApplication
