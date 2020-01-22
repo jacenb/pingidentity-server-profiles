@@ -1,0 +1,15 @@
+# LDIF export started at 20200122162043.210Z
+# Included branch:  ou=applications,dc=pdtrain,dc=com
+# Include operational attributes:  false
+
+# Defined in 00-structure.ldif
+# dn: ou=applications,dc=pdtrain,dc=com
+# objectClass: top
+# objectClass: organizationalUnit
+# ou: applications
+
+dn: uid=testApplication,ou=applications,dc=pdtrain,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: applications
+uid: testApplication

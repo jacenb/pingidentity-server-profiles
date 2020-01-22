@@ -1,0 +1,41 @@
+# LDIF export started at 20200122162235.943Z
+# Included branch:  ou=identities,dc=pdtrain,dc=com
+# Include operational attributes:  false
+
+# Defined in 00-structure.ldif
+# dn: ou=Identities,dc=pdtrain,dc=com
+# objectClass: top
+# objectClass: organizationalUnit
+# ou: Identities
+
+dn: cn=jasonbradley@pingidentity.com,ou=Identities,dc=pdtrain,dc=com
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: pf-connected-identities
+mail: jasonbradley@pingidentity.com
+sn: Bradley
+cn: jasonb
+cn: jasonbradley@pingidentity.com
+pf-connected-identity: auth-source=pf-local-identity:user-id=jasonb
+pf-connected-identity: auth-source=HTT3BSTg7SPUFAFZ:user-id=jasontest@rjbdenverh
+ otmail.onmicrosoft.com
+pf-connected-identity: auth-source=VvimMoumAXK8jOkV:user-id=jasontest
+givenName: Jason
+userPassword: {SSHA256}gEB+j8M4BTIMuhx306wQy60nGQNzzRdqYN37UZzTAYbxgGowp/jQdw==
+
+dn: cn=jasontest@sso.test-win4.com,ou=Identities,dc=pdtrain,dc=com
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: pf-connected-identities
+mail: jasontest@sso.test-win4.com
+sn: Test
+cn: jasontest@rjbdenverhotmail.onmicrosoft.com
+cn: jasontest@sso.test-win4.com
+pf-connected-identity: auth-source=pf-local-identity:user-id=jasontest@rjbdenver
+ hotmail.onmicrosoft.com
+givenName: Jason
+userPassword: {SSHA256}H5uDNazagVPolqoco9hdm0MpMSz8ymU3q99nviBRc/ecdkYYitm9fg==

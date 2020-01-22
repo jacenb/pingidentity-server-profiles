@@ -40,3 +40,15 @@ aci: (targetattr="*")(version 3.0; acl "Allow the pingfederate user to do everyt
 objectClass: top
 objectClass: organizationalUnit
 ou: sessions
+
+# Custom OU from pdtrain
+dn: ou=applications,${USER_BASE_DN}
+objectClass: top
+objectClass: organizationalUnit
+ou: applications
+
+# Custom OU from pdtrain
+dn: ou=Identities,${USER_BASE_DN}
+objectClass: top
+objectClass: organizationalUnit
+ou: Identities
