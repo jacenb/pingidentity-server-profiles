@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:PluginConfiguration isInheritExtendedContractAttributes="false" name="Azure" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
+    <urn:Fields>
+        <urn:Field name="Domain">rjbdenverhotmail.onmicrosoft.com</urn:Field>
+        <urn:Field name="Application Id">aaca6c2c-f366-4e2f-a7ad-b0f4986a2d50</urn:Field>
+        <urn:Field name="Application Key">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoieXBRZnV4MUtyciIsInZlcnNpb24iOiI4LjQuNC4wIn0..oDy6TZ8QaWFLW5xNG9BxaQ.6SBW_8Rk0r2e3BO48jsO7-t34Z6S4G0clmzL4Vo55XzvGUGC5jxWkFGgtb4wSZA9.wJZi_hUz0ewdZGI9Xex6uA</urn:Field>
+        <urn:Field name="Disable user group retrieval">false</urn:Field>
+    </urn:Fields>
+    <urn:AdvancedFields/>
+    <urn:Tables/>
+    <urn:ExtendedContractAttributes/>
+</urn:PluginConfiguration>

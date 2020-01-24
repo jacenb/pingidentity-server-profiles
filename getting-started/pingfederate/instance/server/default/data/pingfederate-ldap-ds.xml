@@ -1,3 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ldap:ldap-sources xmlns:ldap="http://pingidentity.com/2004/09/ldap-ds">
+    <ldap:ldap-source id="LDAP-3CFB9DD7D8F2061E23F562FA53BACA9EAB7D42E5" maskAttributeValues="false" ldapType="ActiveDirectory" ldapTypeDesc="Active Directory" testOnBorrow="false" testOnReturn="false" createIfNecessary="true" minIdle="10" maxActive="100" maxWait="-1" timeBetweenEvictionRunsMillis="60000" readTimeoutMillis="3000" connTimeoutMillis="3000" verifyHost="false">
+        <ldap:host>win-4rpmpsk1u13.sso.test-win4.com</ldap:host>
+        <ldap:principal>SSOTESTWIN4\lookup</ldap:principal>
+        <ldap:use-ssl>true</ldap:use-ssl>
+        <ldap:credentials>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoieXBRZnV4MUtyciIsInZlcnNpb24iOiI4LjQuNC4wIn0..xrrwOqN8ckeLUEMXnRNwhQ.i8kIAXlmViqJ2zMk22zcHw.6kj1exdBv6YOKGJJHf7dXQ</ldap:credentials>
+        <ldap:authenticationMeth>simple</ldap:authenticationMeth>
+        <ldap:description>win-4rpmpsk1u13.sso.test-win4.com</ldap:description>
+        <ldap:binaryAttributes>
+            <ldap:binaryAttribute>objectGUID</ldap:binaryAttribute>
+        </ldap:binaryAttributes>
+    </ldap:ldap-source>
+    <ldap:ldap-source id="LDAP-B608D40FBA7EE0BCD66C62B85C1C8216F64F37F7" maskAttributeValues="false" ldapType="PingDirectory" ldapTypeDesc="PingDirectory" testOnBorrow="false" testOnReturn="false" createIfNecessary="true" minIdle="10" maxActive="100" maxWait="-1" timeBetweenEvictionRunsMillis="60000" readTimeoutMillis="3000" connTimeoutMillis="3000" verifyHost="false">
+        <ldap:host>10.101.61.142:1636</ldap:host>
+        <ldap:principal>cn=dmanager</ldap:principal>
+        <ldap:use-ssl>true</ldap:use-ssl>
+        <ldap:credentials>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoieXBRZnV4MUtyciIsInZlcnNpb24iOiI4LjQuNC4wIn0..dFl0SQFm5U4f4jzQdVf6hA.vbQ29BIhpO2EMfCmnZj0Kg.sqCW_Obz69Dd18LT4zGnpQ</ldap:credentials>
+        <ldap:authenticationMeth>simple</ldap:authenticationMeth>
+        <ldap:description>10.101.61.142:1636</ldap:description>
+        <ldap:binaryAttributes/>
+    </ldap:ldap-source>
 </ldap:ldap-sources>

@@ -11,10 +11,4 @@
     -->
     <item name="dynamic-rsa-key-size">2048</item>
 
-    <!--
-     Maximum number of dynamic OIDC key sets to retain on disk for id_token decryption and which persist on PingFederate restart.
-    -->
-    <item name="max-keysets-retained">5</item>
-
-
 </config>

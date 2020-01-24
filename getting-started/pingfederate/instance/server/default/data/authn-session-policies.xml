@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <authnSessionPolicies>
-    <globalPolicy enableSessions="false" idleTimeoutMins="60" maxTimeoutMins="480"/>
-     <sourcePolicies/>
+    <globalPolicy enableSessions="true" idleTimeoutMins="60" maxTimeoutMins="480"/>
+    <sourcePolicies>
+        <policy authnContextSensitive="false" authnSourceId="HtmlFormIdpAdapter" authnSourceType="ADAPTER" enableSessions="false" id="FLWZ7L12AgIfBuLd3xHPPrwly"/>
+    </sourcePolicies>
 </authnSessionPolicies>

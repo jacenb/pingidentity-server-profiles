@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<md:EntityDescriptor entityID="IDP:OAuth" urn:name="IDP:OAuth" ID="fMf8Tf66qBfBs.QJkISWgREVs3z" urn:baseUrl="https://sso.test-win4.com:9031" urn:LogLevel="STANDARD" urn:isActive="true" xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:urn="urn:sourceid.org:saml2:metadata-extension:v2">
+    <md:Extensions>
+        <urn:EntityExtension PFVersion="8.4.4.0" LicenseGroup="">
+            <urn:VirtualIdentity EntityID="SP:OAuth"/>
+            <urn:DefaultVirtualIdentity EntityID="SP:OAuth"/>
+            <urn:DigitialSignatureAliases VerificationCertAlias="sz10z4l034vl9418mrkmdxwuc"/>
+            <urn:Encryption>
+                <urn:EncryptionPolicy EncryptionAlgorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc" KeyTransportAlgorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p" EncryptAssertion="false" EncryptSubjectNameID="false" SLOEncryptSubjectNameID="false"/>
+                <urn:DecryptionPolicy AssertionEncrypted="false" SubjectNameIDEncrypted="false" AttributeEncrypted="false" SLOSubjectNameIDEncrypted="false"/>
+            </urn:Encryption>
+            <urn:ConnectionTemplateProperties/>
+            <urn:MetadataUrlId xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <urn:enableAutoMetadataUpdate>false</urn:enableAutoMetadataUpdate>
+        </urn:EntityExtension>
+    </md:Extensions>
+    <md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol" WantAuthnRequestsSigned="false">
+        <md:Extensions>
+            <urn:RoleExtension ArtifactTimeoutSeconds="60" LastModified="2019-09-09T13:58:04.666-06:00">
+                <urn:IncomingBindings Artifact="false" POST="true" Redirect="true" SOAP="false"/>
+                <urn:EnabledProfiles IDPInitiatedSSO="false" IDPInitiatedSLO="false" SPInitiatedSSO="true" SPInitiatedSLO="false"/>
+                <urn:IDP AssertionsSigned="false" DefaultTargetResource="">
+                    <urn:ConnectionContractMapping C2cContractId="J51AkFmsO2cy7pb5" C2cContractName="OAuth" RestrictVirtualServerIds="false">
+                        <urn:AttributeMap Name="Mail" Type="Assertion" Value="email"/>
+                        <urn:AttributeMap Name="FirstName" Type="Assertion" Value="given_name"/>
+                        <urn:AttributeMap Name="subject" Type="Assertion" Value="SAML_SUBJECT"/>
+                        <urn:AttributeMap Name="SAML_AUTHN_CTX" Type="Text" Value="NA"/>
+                        <urn:AttributeMap Name="LastName" Type="Assertion" Value="family_name"/>
+                        <urn:AttributeMap Name="OID" Type="Assertion" Value="oid"/>
+                        <urn:TokenAuthorizationIssuanceCriteria/>
+                    </urn:ConnectionContractMapping>
+                    <urn:AccountLinkingAndMapping Type="mapping" IncludeAdditionalAttributes="false"/>
+                    <urn:ErrPageMsg>errorDetail.spSsoFailure</urn:ErrPageMsg>
+                    <urn:OAuthApcId>J51AkFmsO2cy7pb5</urn:OAuthApcId>
+                </urn:IDP>
+            </urn:RoleExtension>
+        </md:Extensions>
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="/idp/SSO.saml2"/>
+        <saml:Attribute Name="SAML_AUTHN_CTX" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"/>
+        <saml:Attribute Name="oid" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"/>
+        <saml:Attribute Name="given_name" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"/>
+        <saml:Attribute Name="family_name" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"/>
+        <saml:Attribute Name="email" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"/>
+    </md:IDPSSODescriptor>
+    <md:RoleDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol" xsi:type="urn:PFAvailableCertsRoleDescriptorType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <urn:availableCert>
+            <urn:Base64EncodedCert>MIIDXDCCAkSgAwIBAgIGAWBwn7DoMA0GCSqGSIb3DQEBCwUAMG8xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDTzEPMA0GA1UEBxMGRGVudmVyMRUwEwYDVQQKEwxQaW5nSWRlbnRpdHkxEDAOBgNVBAsTB1N1cHBvcnQxGTAXBgNVBAMTEElEUCBTaWduaW5nIENlcnQwHhcNMTcxMjE5MjExMzIxWhcNMjcxMjE3MjExMzIxWjBvMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ08xDzANBgNVBAcTBkRlbnZlcjEVMBMGA1UEChMMUGluZ0lkZW50aXR5MRAwDgYDVQQLEwdTdXBwb3J0MRkwFwYDVQQDExBJRFAgU2lnbmluZyBDZXJ0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjkvY2dk0HJv32hWxVGS51cAxGa1b3BhciVlyBAFcDuyYHRWxcafgakz20PGn0jTPMgqBqKd+uQ8YUUz4oCPd/mda+XWTkfmihT1fo2XuwBNFN8I8+cpQS7ZOnhPpXK29JTbQYm53ZrjvYQSesKTLbbsnLwM91xOwI8I7sznbWhDktvjTZ0EnXFDYIVDY6y+cnSYdGQb5olvolkJ4lEprm6Z9bHHe2SkjUwPsau4+D435ZdC6kJkUB4ppoNDczuGjUdQrr0XpmEQJ1G+xrnasBJzSVMsGq+DS2tYIiZkB2PP1gvCY1GuT0P4L4f1lNcll5PRcjAXKHuhwcH8xXa32nwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQCM8eJHCtpu9d6AS5jvC7pLw+i6qrUfx+w8X/ihNbCT/WAmq4gaSpyYYJI3U1+3cmqk6S7OSMI6T6beo89hX4gMghhij7RF+rOcwDbYq5+MBUHXtH0olKAoRV6nu5bdwlvS1emLh/vYk042z6qnD5sKIti58XuaparmkR2UnYTsPSgmB8lB7+zqjnt2QuFPYwigojsT1ACbVbLoqw38sBcc1bMV+TR9sKtzGsrQx29MpVLBIXD4+RoIi8DZTsgFu/D+F17rzUCAjJB0gZKpwPPyeCjDRoCOEJ2UniMwE8hSqkA+6ch2W8vpR0ruLzyssXI4F1n9Rsoqgc2GBNv25fTE</urn:Base64EncodedCert>
+            <urn:alias>sz10z4l034vl9418mrkmdxwuc</urn:alias>
+        </urn:availableCert>
+    </md:RoleDescriptor>
+    <md:ContactPerson contactType="administrative"/>
+</md:EntityDescriptor>

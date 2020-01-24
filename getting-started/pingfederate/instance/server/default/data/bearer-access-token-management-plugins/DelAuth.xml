@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:AccessTokenManagerConfiguration inheritAccessControlSettings="false" inheritSelectionSettings="false" inheritSessionValidationSettings="false" restrictClients="false" checkSessionRevocationStatus="true" checkValidAuthnSession="true" updateAuthnSessionActivity="true" isInheritExtendedContractAttributes="false" name="DelAuth" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
+    <urn:Fields>
+        <urn:Field name="Token Lifetime">120</urn:Field>
+        <urn:Field name="JWS Algorithm">HS256</urn:Field>
+        <urn:Field name="Active Symmetric Key ID">k1</urn:Field>
+        <urn:Field name="Active Signing Certificate Key ID"/>
+        <urn:Field name="JWE Algorithm"/>
+        <urn:Field name="JWE Content Encryption Algorithm"/>
+        <urn:Field name="Active Symmetric Encryption Key ID"/>
+        <urn:Field name="Asymmetric Encryption Key"/>
+        <urn:Field name="Asymmetric Encryption JWKS URL"/>
+        <urn:Field name="Include Key ID Header Parameter">true</urn:Field>
+        <urn:Field name="Include X.509 Thumbprint Header Parameter"/>
+        <urn:Field name="Default JWKS URL Cache Duration">720</urn:Field>
+        <urn:Field name="Include JWE Key ID Header Parameter">true</urn:Field>
+        <urn:Field name="Include JWE X.509 Thumbprint Header Parameter"/>
+        <urn:Field name="Client ID Claim Name">client_id</urn:Field>
+        <urn:Field name="Scope Claim Name">scope</urn:Field>
+        <urn:Field name="Space Delimit Scope Values"/>
+        <urn:Field name="Issuer Claim Value"/>
+        <urn:Field name="Audience Claim Value"/>
+        <urn:Field name="JWT ID Claim Length">0</urn:Field>
+        <urn:Field name="Access Grant GUID Claim Name"/>
+        <urn:Field name="JWKS Endpoint Path"/>
+        <urn:Field name="JWKS Endpoint Cache Duration">720</urn:Field>
+        <urn:Field name="Publish Key ID X.509 URL"/>
+        <urn:Field name="Publish Thumbprint X.509 URL"/>
+    </urn:Fields>
+    <urn:AdvancedFields>
+        <urn:Field name="Include Key ID Header Parameter">true</urn:Field>
+        <urn:Field name="Include X.509 Thumbprint Header Parameter"/>
+        <urn:Field name="Default JWKS URL Cache Duration">720</urn:Field>
+        <urn:Field name="Include JWE Key ID Header Parameter">true</urn:Field>
+        <urn:Field name="Include JWE X.509 Thumbprint Header Parameter"/>
+        <urn:Field name="Client ID Claim Name">client_id</urn:Field>
+        <urn:Field name="Scope Claim Name">scope</urn:Field>
+        <urn:Field name="Space Delimit Scope Values"/>
+        <urn:Field name="Issuer Claim Value"/>
+        <urn:Field name="Audience Claim Value"/>
+        <urn:Field name="JWT ID Claim Length">0</urn:Field>
+        <urn:Field name="Access Grant GUID Claim Name"/>
+        <urn:Field name="JWKS Endpoint Path"/>
+        <urn:Field name="JWKS Endpoint Cache Duration">720</urn:Field>
+        <urn:Field name="Publish Key ID X.509 URL"/>
+        <urn:Field name="Publish Thumbprint X.509 URL"/>
+    </urn:AdvancedFields>
+    <urn:Tables>
+        <urn:Table name="Symmetric Keys">
+            <urn:Row>
+                <urn:Field name="Key ID">k1</urn:Field>
+                <urn:Field name="Key">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoieXBRZnV4MUtyciIsInZlcnNpb24iOiI4LjQuNC4wIn0..pWztz5yoMPPetjdP-qSKUw.29WzSnyJaJgKJhSPEA7qSW89110LOx7zEwl8ixPalGJfla_mamrsSbsfcrIuaAo2NhYKrrISkDPgyED4czb8ZmJJZlTAxsMVTd0a0Hqr-KY.nhlhAQhVZpegN3ECFNBfqg</urn:Field>
+                <urn:Field name="Encoding"/>
+            </urn:Row>
+        </urn:Table>
+        <urn:Table name="Certificates"/>
+    </urn:Tables>
+    <urn:ExtendedContractAttributes>
+        <urn:AttributeName>sub</urn:AttributeName>
+    </urn:ExtendedContractAttributes>
+</urn:AccessTokenManagerConfiguration>

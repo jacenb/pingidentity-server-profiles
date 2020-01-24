@@ -5,17 +5,6 @@
 <!-- Response header configuration for the PingFederate Administrative        -->
 <!-- Console                                                                  -->
 <!--                                                                          -->
-<!-- For each header, you can optionally specify a list of semi-column (;)    -->
-<!-- separated URL patterns that should include or exclude this header in the -->
-<!-- response using the include-patterns or exclude-patterns attributes       -->
-<!-- respectively. Use a wildcard (*) at the beginning to match multiple      -->
-<!-- URLs.                                                                    -->
-<!--                                                                          -->
-<!-- Note that only either one of include-patterns or exclude-patterns must   -->
-<!-- be specified per header.                                                 -->
-<!-- Example:                                                                 -->
-<!--    */idp/startSLO.ping;*/sp/SLO.saml2                                    -->
-<!--                                                                          -->
 <!-- ======================================================================== -->
 
 <con:config xmlns:con="http://www.sourceid.org/2004/05/config">
@@ -39,21 +28,7 @@
     <!--
     <con:map name="Strict-Transport-Security">
         <con:item name="value">max-age=31536000</con:item>
-        <con:item name="include-patterns">*</con:item>
     </con:map>
     -->
-
-    <!-- ===================================================================== -->
-    <!-- HTTP X-Frame-Options response header field                            -->
-    <!-- ===================================================================== -->
-    <!-- This header is used to indicate whether or not a browser should be    -->
-    <!-- allowed to render a page in a frame or iframe.                        -->
-    <!--                                                                       -->
-    <!-- This response header can also be configured for the PingFederate      -->
-    <!-- runtime application in response-header-runtime-config.xml.            -->
-    <!--                                                                       -->
-    <con:map name="X-Frame-Options">
-        <con:item name="value">DENY</con:item>
-        <con:item name="include-patterns">*</con:item>
-    </con:map>
+ 
 </con:config>

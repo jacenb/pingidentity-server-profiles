@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:Clients xmlns:urn="urn:pingidentity.com:pf:oauth:client">
+    <urn:Client client_id="api_implicit" name="Implicit API Client" persistentGrantExpirationTime="0" persistentGrantExpirationTimeUnit="d" lastModified="1969-12-31T17:00:00.000-07:00" bypassApprovalPage="false" restrictScopes="false" clientAuthnType="NONE" enforceOneTimeJWT="false" isRequireSignedRequest="false">
+        <urn:Grant type="implicit"/>
+        <urn:RedirectUri>https://localhost:3000/PingAccessQuickStart/api-demo</urn:RedirectUri>
+    </urn:Client>
+</urn:Clients>

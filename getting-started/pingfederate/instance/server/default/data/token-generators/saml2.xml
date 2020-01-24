@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:PluginConfiguration isInheritExtendedContractAttributes="false" name="saml2" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
+    <urn:Fields>
+        <urn:Field name="Minutes Before">5</urn:Field>
+        <urn:Field name="Minutes After">35</urn:Field>
+        <urn:Field name="Issuer">IDP:STS</urn:Field>
+        <urn:Field name="Signing Certificate">lc29jvofz3ife21qjlu1rk5o5</urn:Field>
+        <urn:Field name="Signing Algorithm">SHA1</urn:Field>
+        <urn:Field name="Include Certificate in KeyInfo">false</urn:Field>
+        <urn:Field name="Include Raw Key in KeyValue">false</urn:Field>
+        <urn:Field name="Audience">IDP:STS</urn:Field>
+        <urn:Field name="Confirmation Method">urn:oasis:names:tc:SAML:2.0:cm:sender-vouches</urn:Field>
+        <urn:Field name="Encryption Certificate"/>
+    </urn:Fields>
+    <urn:AdvancedFields/>
+    <urn:Tables/>
+    <urn:ExtendedContractAttributes/>
+</urn:PluginConfiguration>

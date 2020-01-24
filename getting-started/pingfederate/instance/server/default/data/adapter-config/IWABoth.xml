@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:AdapterConfiguration authnCtxClassRef="" isInheritAttributeSettings="false" isInheritAttributeMapping="false" maskOgnlValues="false" isInheritExtendedContractAttributes="false" name="IWABoth" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
+    <urn:Fields>
+        <urn:Field name="Enabled Authentication Types">Both</urn:Field>
+        <urn:Field name="Domain/Realm Name">KERB-7CFBDAD9220375FA3B08B2D7F66F9CA665C8EB13</urn:Field>
+        <urn:Field name="Error URL Redirect"/>
+        <urn:Field name="Kerberos Only Error Template">false</urn:Field>
+        <urn:Field name="jcifs.smb.client.soTimeout">300000</urn:Field>
+        <urn:Field name="jcifs.netbios.cachePolicy">600</urn:Field>
+        <urn:Field name="NTLM Challenge Retries">3</urn:Field>
+        <urn:Field name="Authentication Context Value"/>
+        <urn:Field name="NTLM Log Level">4</urn:Field>
+    </urn:Fields>
+    <urn:AdvancedFields>
+        <urn:Field name="Kerberos Only Error Template">false</urn:Field>
+        <urn:Field name="jcifs.smb.client.soTimeout">300000</urn:Field>
+        <urn:Field name="jcifs.netbios.cachePolicy">600</urn:Field>
+        <urn:Field name="NTLM Challenge Retries">3</urn:Field>
+        <urn:Field name="Authentication Context Value"/>
+        <urn:Field name="NTLM Log Level">4</urn:Field>
+    </urn:AdvancedFields>
+    <urn:Tables>
+        <urn:Table name="NTLM Details">
+            <urn:Row>
+                <urn:Field name="NTLM Username">Ping-NTLM</urn:Field>
+                <urn:Field name="NTLM Password">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoieXBRZnV4MUtyciIsInZlcnNpb24iOiI4LjQuNC4wIn0..8nNuW0mINQEPQvpHFchiHw.enapRJzj5dJtell_UXZ5X_r4VScICj4IEmuWTFFDoMc.KBtKKtj-Vfer49IrhDv3-Q</urn:Field>
+                <urn:Field name="DNS Servers"/>
+                <urn:Field name="ADSS Site"/>
+                <urn:Field name="Node Index"/>
+            </urn:Row>
+        </urn:Table>
+    </urn:Tables>
+    <urn:ExtendedContractAttributes>
+        <urn:AttributeName>givenName</urn:AttributeName>
+        <urn:AttributeName>memberOf</urn:AttributeName>
+        <urn:AttributeName>sn</urn:AttributeName>
+        <urn:AttributeName>email</urn:AttributeName>
+    </urn:ExtendedContractAttributes>
+    <urn:UniqueKeyField>Username</urn:UniqueKeyField>
+    <urn:AttributeMapping>
+        <urn1:AttributeMap Name="Domain/Realm Name" Type="Adapter" Value="Domain/Realm Name" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="Username" Type="Adapter" Value="Username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="givenName" Type="LDAP" AttributeSourceId="AD" Value="givenName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="memberOf" Type="LDAP" AttributeSourceId="AD" Value="memberOf" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="sn" Type="LDAP" AttributeSourceId="AD" Value="sn" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="email" Type="LDAP" AttributeSourceId="AD" Value="mail" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeSource Id="AD" Description="AD" Type="LDAP" DataSourceId="LDAP-3CFB9DD7D8F2061E23F562FA53BACA9EAB7D42E5" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2">
+            <urn1:Parameter Name="filter" Value="sAMAccountName=${Username}"/>
+            <urn1:Parameter Name="search_base" Value="CN=Users,DC=sso,DC=test-win4,DC=com"/>
+            <urn1:Parameter Name="search_scope" Value="SUBTREE_SCOPE"/>
+            <urn1:Parameter Name="memberof_nested_group" Value="false"/>
+        </urn1:AttributeSource>
+        <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+    </urn:AttributeMapping>
+</urn:AdapterConfiguration>

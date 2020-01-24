@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:AdapterConfiguration authnCtxClassRef="" isInheritAttributeSettings="false" isInheritAttributeMapping="false" maskOgnlValues="false" isInheritExtendedContractAttributes="false" name="IDPOTK" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
+    <urn:Fields>
+        <urn:Field name="Password">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoieXBRZnV4MUtyciIsInZlcnNpb24iOiI4LjQuNC4wIn0..VkjDcVOIsDZgEYxGePVNIg.pns_ImR95-q_z2ffRSHGBQ._l1lbbq-ynikHQbA0lMJug</urn:Field>
+        <urn:Field name="Confirm Password">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoieXBRZnV4MUtyciIsInZlcnNpb24iOiI4LjQuNC4wIn0..oxKRupj1m78HQyP0dhmi3Q.ZhbeXqfFvLWVWjmkfluXgA.nG4274cX-Zj8bwH7-1xeZg</urn:Field>
+        <urn:Field name="Authentication Service">https://sso.test-win4.com:9031/IdpSample/?cmd=sso</urn:Field>
+        <urn:Field name="Transport Mode">1</urn:Field>
+        <urn:Field name="Token Name">opentoken</urn:Field>
+        <urn:Field name="Cipher Suite">2</urn:Field>
+        <urn:Field name="Logout Service">https://sso.test-win4.com:9031/IdpSample/?cmd=slo</urn:Field>
+        <urn:Field name="Cookie Domain"/>
+        <urn:Field name="Cookie Path">/</urn:Field>
+        <urn:Field name="Token Lifetime">300</urn:Field>
+        <urn:Field name="Session Lifetime">43200</urn:Field>
+        <urn:Field name="Not Before Tolerance">0</urn:Field>
+        <urn:Field name="Force SunJCE Provider">false</urn:Field>
+        <urn:Field name="Use Verbose Error Messages">false</urn:Field>
+        <urn:Field name="Obfuscate Password">true</urn:Field>
+        <urn:Field name="Session Cookie">false</urn:Field>
+        <urn:Field name="Secure Cookie">false</urn:Field>
+        <urn:Field name="HTTP Only Flag">true</urn:Field>
+        <urn:Field name="Delete Cookie">false</urn:Field>
+        <urn:Field name="Replay Prevention">false</urn:Field>
+        <urn:Field name="Skip Malformed Attribute Detection">false</urn:Field>
+    </urn:Fields>
+    <urn:AdvancedFields>
+        <urn:Field name="Transport Mode">1</urn:Field>
+        <urn:Field name="Token Name">opentoken</urn:Field>
+        <urn:Field name="Cipher Suite">2</urn:Field>
+        <urn:Field name="Logout Service">https://sso.test-win4.com:9031/IdpSample/?cmd=slo</urn:Field>
+        <urn:Field name="Cookie Domain"/>
+        <urn:Field name="Cookie Path">/</urn:Field>
+        <urn:Field name="Token Lifetime">300</urn:Field>
+        <urn:Field name="Session Lifetime">43200</urn:Field>
+        <urn:Field name="Not Before Tolerance">0</urn:Field>
+        <urn:Field name="Force SunJCE Provider">false</urn:Field>
+        <urn:Field name="Use Verbose Error Messages">false</urn:Field>
+        <urn:Field name="Obfuscate Password">true</urn:Field>
+        <urn:Field name="Session Cookie">false</urn:Field>
+        <urn:Field name="Secure Cookie">false</urn:Field>
+        <urn:Field name="HTTP Only Flag">true</urn:Field>
+        <urn:Field name="Delete Cookie">false</urn:Field>
+        <urn:Field name="Replay Prevention">false</urn:Field>
+        <urn:Field name="Skip Malformed Attribute Detection">false</urn:Field>
+    </urn:AdvancedFields>
+    <urn:Tables/>
+    <urn:ExtendedContractAttributes>
+        <urn:AttributeName>SAML_AUTHN_CTX</urn:AttributeName>
+    </urn:ExtendedContractAttributes>
+    <urn:UniqueKeyField>subject</urn:UniqueKeyField>
+    <urn:AttributeMapping>
+        <urn1:AttributeMap Name="subject" Type="Adapter" Value="subject" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="SAML_AUTHN_CTX" Type="Adapter" Value="SAML_AUTHN_CTX" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+    </urn:AttributeMapping>
+</urn:AdapterConfiguration>

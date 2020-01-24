@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:PluginConfiguration isInheritExtendedContractAttributes="false" name="PingOne AD PCV" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
+    <urn:Fields>
+        <urn:Field name="LDAP Datastore">LDAP-3CFB9DD7D8F2061E23F562FA53BACA9EAB7D42E5</urn:Field>
+        <urn:Field name="Search Base">CN=Users,DC=sso,DC=test-win4,DC=com</urn:Field>
+        <urn:Field name="Search Filter">sAMAccountName=${username}</urn:Field>
+        <urn:Field name="Scope of Search">Subtree</urn:Field>
+        <urn:Field name="Case-Sensitive Matching">true</urn:Field>
+        <urn:Field name="Display Name Attribute">displayName</urn:Field>
+        <urn:Field name="Mail Attribute">mail</urn:Field>
+        <urn:Field name="SMS Attribute"/>
+        <urn:Field name="PingID Username Attribute">username</urn:Field>
+    </urn:Fields>
+    <urn:AdvancedFields>
+        <urn:Field name="Display Name Attribute">displayName</urn:Field>
+        <urn:Field name="Mail Attribute">mail</urn:Field>
+        <urn:Field name="SMS Attribute"/>
+        <urn:Field name="PingID Username Attribute">username</urn:Field>
+    </urn:AdvancedFields>
+    <urn:Tables>
+        <urn:Table name="Authentication Error Overrides"/>
+    </urn:Tables>
+    <urn:ExtendedContractAttributes>
+        <urn:AttributeName>objectGUID</urn:AttributeName>
+        <urn:AttributeName>sn</urn:AttributeName>
+        <urn:AttributeName>memberOf</urn:AttributeName>
+        <urn:AttributeName>userPrincipalName</urn:AttributeName>
+    </urn:ExtendedContractAttributes>
+</urn:PluginConfiguration>

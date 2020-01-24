@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:TokenProcessorConfiguration isInheritAttributeSettings="false" maskOgnlValues="false" isInheritExtendedContractAttributes="false" name="oauth" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
+    <urn:Fields>
+        <urn:Field name="Access Token Manager">default</urn:Field>
+        <urn:Field name="Scope value as single string">false</urn:Field>
+    </urn:Fields>
+    <urn:AdvancedFields/>
+    <urn:Tables/>
+    <urn:ExtendedContractAttributes>
+        <urn:AttributeName>Username</urn:AttributeName>
+    </urn:ExtendedContractAttributes>
+</urn:TokenProcessorConfiguration>

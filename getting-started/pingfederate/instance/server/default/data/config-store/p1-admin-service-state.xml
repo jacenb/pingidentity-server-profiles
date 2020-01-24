@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:config xmlns:con="http://www.sourceid.org/2004/05/config">
+    <con:item name="ApplicationDockEndpoint">https://desktop.pingone.com/cd-1635963396.pingidentity</con:item>
+    <con:item name="ProvisioningBaseUrl">https://scim.connect.pingidentity.com/prov-service</con:item>
+    <con:item name="KeyPairAlias">t2n8q0y7toa6uyng7klzox3sz</con:item>
+    <con:item name="ClientId">2a2413c5-91fa-4c8e-b9da-3070b34f7a45</con:item>
+    <con:item name="AccountId">ecd7c091-9794-41f1-8d5f-f281f46d5396</con:item>
+    <con:item name="CompanyName">Ping Identity</con:item>
+    <con:item name="Associated">true</con:item>
+</con:config>
