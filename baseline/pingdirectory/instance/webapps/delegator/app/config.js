@@ -6,7 +6,7 @@
 
 // The hostname for the public Ping Federate instance used with this app.
 // DEFAULT: window.PF_HOST = 'pingfederate-${PING_IDENTITY_K8S_NAMESPACE}.ping-devops.com';
-window.PF_HOST = 'pingfederate-${PING_IDENTITY_K8S_NAMESPACE}.ping-devops.com';
+window.PF_HOST = 'pingfederate-ping-cloud-devops-eks-jasonbradley.ping-devops.com';
 
 // The port for the public Ping Federate instance used with this app.
 // NOTE: If using port 443 along with a base URL with no specified port, comment this out or set to
@@ -16,7 +16,7 @@ window.PF_PORT = '';
 
 // The client id that was set up with Ping Federate and intended to be used by this app.
 // DEFAULT: window.DADMIN_CLIENT_ID = 'dadmin';
-window.DADMIN_CLIENT_ID = 'dadmin';
+window.DADMIN_CLIENT_ID = 'pddelauth';
 
 // The hostname for the DS instance the app will be interfacing with. By default, the app assumes it
 // is hosted alongside your DS instance, in which case it does not need to be specified. Only change
