@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:PluginConfiguration isInheritExtendedContractAttributes="false" name="Migrated SMTP Settings" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
+    <urn:Fields>
+        <urn:Field name="From Address">placeholder@pingidentity.com</urn:Field>
+        <urn:Field name="Email Server">localhost</urn:Field>
+        <urn:Field name="SMTP Port">25</urn:Field>
+        <urn:Field name="Encryption Method">NONE</urn:Field>
+        <urn:Field name="SMTPS Port">465</urn:Field>
+        <urn:Field name="Verify Hostname">false</urn:Field>
+        <urn:Field name="Username"/>
+        <urn:Field name="Password"/>
+    </urn:Fields>
+    <urn:AdvancedFields>
+        <urn:Field name="Connection Timeout">30</urn:Field>
+        <urn:Field name="Retry Attempt">2</urn:Field>
+        <urn:Field name="Retry Delay">2</urn:Field>
+        <urn:Field name="Enable SMTP Debugging Messages">false</urn:Field>
+    </urn:AdvancedFields>
+    <urn:Tables/>
+</urn:PluginConfiguration>

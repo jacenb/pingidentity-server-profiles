@@ -8,4 +8,10 @@
     </con:map>
     <con:item name="bearer-access-token-management-plugins-default">default</con:item>
     <con:map name="bearer-access-token-management-plugins-parents"/>
+    <con:map name="bearer-access-token-management-plugin-sequence">
+        <con:item name="DelAuth">1</con:item>
+        <con:item name="default">4</con:item>
+        <con:item name="JWT">2</con:item>
+        <con:item name="OAuth">3</con:item>
+    </con:map>
 </con:config>

@@ -2,7 +2,7 @@
 <urn:PluginConfiguration isInheritExtendedContractAttributes="false" name="Radius" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
     <urn:Fields>
         <urn:Field name="CHECK GROUPS">false</urn:Field>
-        <urn:Field name="FAIL Login on PingID technical error">true</urn:Field>
+        <urn:Field name="CHECK BYPASS GROUPS">false</urn:Field>
         <urn:Field name="IF THE USER IS NOT ACTIVATED ON PINGID">register</urn:Field>
         <urn:Field name="FAIL Login if the user is not member of the ldap group">true</urn:Field>
         <urn:Field name="RADIUS Server Authentication Port">1812</urn:Field>
@@ -16,34 +16,48 @@ idp_url=https://idpxnyl3m.pingidentity.com/pingid
 org_alias=ecd7c091-9794-41f1-8d5f-f281f46d5396
 admin_url=https://idpxnyl3m.pingidentity.com/pingid
 authenticator_url=https://authenticator.pingone.com/pingid/ppm</urn:Field>
+        <urn:Field name="Authentication During Errors">Bypass User</urn:Field>
+        <urn:Field name="Users Without a Paired Device"/>
+        <urn:Field name="LDAP Data source"/>
+        <urn:Field name="Create Entry For Devices">false</urn:Field>
+        <urn:Field name="Encryption Key For Devices"/>
+        <urn:Field name="Search Base"/>
+        <urn:Field name="Search Filter"/>
+        <urn:Field name="Scope of Search"/>
+        <urn:Field name="Distinguished Name Pattern"/>
+        <urn:Field name="State Attribute"/>
         <urn:Field name="Server Threads"/>
         <urn:Field name="Enable RADIUS Server">true</urn:Field>
         <urn:Field name="Default Shared Secret"/>
         <urn:Field name="PingID service ID">vpn</urn:Field>
-        <urn:Field name="State Encryption Key">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoieXBRZnV4MUtyciIsInZlcnNpb24iOiI4LjQuNC4wIn0..sWFk6qeSm1Gvuf7dJIl21w.TPiv4voFGKfbtgpHdfWAYksXeKU_dM-v-DFnPU2lGFV2jeXsuQNKHX1V6JIsJU9A.lUhtsGUu8z02o4VtlKQrNA</urn:Field>
+        <urn:Field name="State Encryption Key">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoieXBRZnV4MUtyciIsInZlcnNpb24iOiI5LjMuMy4zIn0..VgFbzRigIgjF2MM0Nmlo8w.Tg9Hl2DHsohNNVDI2jnKybStn0GbujKuoArTXzI-eEpqZmfA67qxHVNuFycBdu-F.UJikZNpebwTPoGfszrBgjQ</urn:Field>
         <urn:Field name="State Lifetime">300</urn:Field>
         <urn:Field name="RADIUS client doesn't support challenge">false</urn:Field>
         <urn:Field name="OTP in password separator">Comma</urn:Field>
         <urn:Field name="RADIUS client password validation">false</urn:Field>
         <urn:Field name="PingID username attribute"/>
+        <urn:Field name="PingId Heartbeat Timeout"/>
+        <urn:Field name="Newline Character">None</urn:Field>
     </urn:Fields>
     <urn:AdvancedFields>
         <urn:Field name="Server Threads"/>
         <urn:Field name="Enable RADIUS Server">true</urn:Field>
         <urn:Field name="Default Shared Secret"/>
         <urn:Field name="PingID service ID">vpn</urn:Field>
-        <urn:Field name="State Encryption Key">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoieXBRZnV4MUtyciIsInZlcnNpb24iOiI4LjQuNC4wIn0..FULC2IcqGH344M3ZM4tTBw.XOEvszjWSRGhfhekySGZKZPV_OcoiqWIlE00BPkT1bD76lxdwi35xtUDEnYIj7hZ.ZEjBLhiXj1nbYy4iGmqxWw</urn:Field>
+        <urn:Field name="State Encryption Key">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoieXBRZnV4MUtyciIsInZlcnNpb24iOiI5LjMuMy4zIn0..JgHPhX33yvrYpZceXpfNLQ.NJ1muFFhtlSYOBdo5hHhC8ODMlkPGmduNa4lF8yU8XygM6HWKt7pQRRKx17m3xd7.BAMZniJFrI79xay37ieaXw</urn:Field>
         <urn:Field name="State Lifetime">300</urn:Field>
         <urn:Field name="RADIUS client doesn't support challenge">false</urn:Field>
         <urn:Field name="OTP in password separator">Comma</urn:Field>
         <urn:Field name="RADIUS client password validation">false</urn:Field>
         <urn:Field name="PingID username attribute"/>
+        <urn:Field name="PingId Heartbeat Timeout"/>
+        <urn:Field name="Newline Character">None</urn:Field>
     </urn:AdvancedFields>
     <urn:Tables>
         <urn:Table name="RADIUS Clients">
             <urn:Row>
                 <urn:Field name="Client IP">127.0.0.1</urn:Field>
-                <urn:Field name="Client Shared Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoieXBRZnV4MUtyciIsInZlcnNpb24iOiI4LjQuNC4wIn0..ZM82bZ4IaZmel2VpH4__iA.qoS_Clas7BXoUgs3pOkQog.koGx5-iFuyIRFRV1X69K5A</urn:Field>
+                <urn:Field name="Client Shared Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoieXBRZnV4MUtyciIsInZlcnNpb24iOiI5LjMuMy4zIn0..6_7IjfQoeXONT-_v5YR--g.TlI-c4tNxCamazskJaTmOw.uywYnraIo0NfvWN9KBUNqQ</urn:Field>
             </urn:Row>
         </urn:Table>
         <urn:Table name="Delegate PCV's">
@@ -52,6 +66,9 @@ authenticator_url=https://authenticator.pingone.com/pingid/ppm</urn:Field>
             </urn:Row>
         </urn:Table>
         <urn:Table name="Member Of Groups"/>
+        <urn:Table name="Bypass Member Of Groups"/>
+        <urn:Table name="Multiple attributes mapping rules"/>
+        <urn:Table name="User specific groups to Radius Client"/>
     </urn:Tables>
     <urn:ExtendedContractAttributes/>
 </urn:PluginConfiguration>

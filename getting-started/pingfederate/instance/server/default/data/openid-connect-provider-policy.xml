@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urn:OpenIdConnectProviderPolicy enabled="true" defaultPolicyGroupId="PA-WAM" trackUserSessionsForLogout="false" xmlns:urn="urn:pingidentity.com:pf:openid:connect:idp:policy">
-    <urn:ProviderPolicyGroup policyId="PA-WAM" idTokenLife="5" includeSriInIdToken="true" includeUserInfoInIdToken="true" policyName="PA-WAM" accessTokenManagerId="default">
+    <urn:ProviderPolicyGroup policyId="PA-WAM" idTokenLife="5" includeSriInIdToken="true" includeUserInfoInIdToken="true" includeSHashInIdToken="false" policyName="PA-WAM" accessTokenManagerId="default">
         <urn:UserInfoMapping>
             <urn1:AttributeMap Name="firstName" Type="Text" Value="Jason" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
             <urn1:AttributeMap Name="sub" Type="Token" Value="Username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
@@ -10,8 +10,10 @@
             <urn1:AttributeMap Name="group" Type="Text" Value="sales" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
             <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         </urn:UserInfoMapping>
+        <urn:scopeAttributesMap/>
+        <urn:attributeContractInclusionMap/>
     </urn:ProviderPolicyGroup>
-    <urn:ProviderPolicyGroup policyId="Internal" idTokenLife="5" includeSriInIdToken="false" includeUserInfoInIdToken="false" policyName="Internal" accessTokenManagerId="JWT">
+    <urn:ProviderPolicyGroup policyId="Internal" idTokenLife="5" includeSriInIdToken="false" includeUserInfoInIdToken="false" includeSHashInIdToken="false" policyName="Internal" accessTokenManagerId="JWT">
         <urn:UserInfoMapping>
             <urn1:AttributeMap Name="sub" Type="Token" Value="sub" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
             <urn1:AttributeMap Name="zoneinfo" Type="Text" Value="No" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
@@ -40,8 +42,10 @@
             <urn1:AttributeMap Name="address.street_address" Type="Text" Value="123 Main St." xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
             <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         </urn:UserInfoMapping>
+        <urn:scopeAttributesMap/>
+        <urn:attributeContractInclusionMap/>
     </urn:ProviderPolicyGroup>
-    <urn:ProviderPolicyGroup policyId="PAPMAgent" idTokenLife="5" includeSriInIdToken="true" includeUserInfoInIdToken="true" policyName="PAPMAgent" accessTokenManagerId="default">
+    <urn:ProviderPolicyGroup policyId="PAPMAgent" idTokenLife="5" includeSriInIdToken="true" includeUserInfoInIdToken="true" includeSHashInIdToken="false" policyName="PAPMAgent" accessTokenManagerId="default">
         <urn:UserInfoMapping>
             <urn1:AttributeMap Name="sub" Type="Token" Value="Username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
             <urn1:AttributeMap Name="firstname" Type="LDAP" AttributeSourceId="AD" Value="givenName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
@@ -57,8 +61,10 @@
             </urn1:AttributeSource>
             <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         </urn:UserInfoMapping>
+        <urn:scopeAttributesMap/>
+        <urn:attributeContractInclusionMap/>
     </urn:ProviderPolicyGroup>
-    <urn:ProviderPolicyGroup policyId="ServiceHub" idTokenLife="5" includeSriInIdToken="true" includeUserInfoInIdToken="true" policyName="ServiceHub" accessTokenManagerId="default">
+    <urn:ProviderPolicyGroup policyId="ServiceHub" idTokenLife="5" includeSriInIdToken="true" includeUserInfoInIdToken="true" includeSHashInIdToken="false" policyName="ServiceHub" accessTokenManagerId="default">
         <urn:UserInfoMapping>
             <urn1:AttributeMap Name="sub" Type="Token" Value="Username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
             <urn1:AttributeMap Name="firstname" Type="LDAP" AttributeSourceId="AD" Value="givenName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
@@ -75,8 +81,10 @@
             </urn1:AttributeSource>
             <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         </urn:UserInfoMapping>
+        <urn:scopeAttributesMap/>
+        <urn:attributeContractInclusionMap/>
     </urn:ProviderPolicyGroup>
-    <urn:ProviderPolicyGroup policyId="SPSample" idTokenLife="5" includeSriInIdToken="false" includeUserInfoInIdToken="true" policyName="SPSample" accessTokenManagerId="JWT">
+    <urn:ProviderPolicyGroup policyId="SPSample" idTokenLife="5" includeSriInIdToken="false" includeUserInfoInIdToken="true" includeSHashInIdToken="false" policyName="SPSample" accessTokenManagerId="JWT">
         <urn:UserInfoMapping>
             <urn1:AttributeMap Name="sub" Type="Token" Value="sub" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
             <urn1:AttributeMap Name="address.locality" Type="Text" Value="Aurora" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
@@ -98,8 +106,10 @@
             <urn1:AttributeMap Name="address.street_address" Type="Text" Value="6098 S. Ukraine St." xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
             <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         </urn:UserInfoMapping>
+        <urn:scopeAttributesMap/>
+        <urn:attributeContractInclusionMap/>
     </urn:ProviderPolicyGroup>
-    <urn:ProviderPolicyGroup policyId="OAuth" idTokenLife="5" includeSriInIdToken="false" includeUserInfoInIdToken="false" policyName="OAuth" accessTokenManagerId="OAuth">
+    <urn:ProviderPolicyGroup policyId="OAuth" idTokenLife="5" includeSriInIdToken="false" includeUserInfoInIdToken="false" includeSHashInIdToken="false" policyName="OAuth" accessTokenManagerId="OAuth">
         <urn:UserInfoMapping>
             <urn1:AttributeMap Name="sub" Type="Token" Value="family_name" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
             <urn1:AttributeMap Name="oid" Type="Token" Value="oid" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
@@ -108,8 +118,10 @@
             <urn1:AttributeMap Name="email" Type="Token" Value="email" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
             <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         </urn:UserInfoMapping>
+        <urn:scopeAttributesMap/>
+        <urn:attributeContractInclusionMap/>
     </urn:ProviderPolicyGroup>
-    <urn:ProviderPolicyGroup policyId="PASSO" idTokenLife="5" includeSriInIdToken="true" includeUserInfoInIdToken="true" policyName="PASSO" accessTokenManagerId="default">
+    <urn:ProviderPolicyGroup policyId="PASSO" idTokenLife="5" includeSriInIdToken="true" includeUserInfoInIdToken="true" includeSHashInIdToken="false" policyName="PASSO" accessTokenManagerId="default">
         <urn:UserInfoMapping>
             <urn1:AttributeMap Name="firstName" Type="Token" Value="given_name" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
             <urn1:AttributeMap Name="sub" Type="Token" Value="Username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
@@ -124,11 +136,15 @@
             </urn1:AttributeSource>
             <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         </urn:UserInfoMapping>
+        <urn:scopeAttributesMap/>
+        <urn:attributeContractInclusionMap/>
     </urn:ProviderPolicyGroup>
-    <urn:ProviderPolicyGroup policyId="DelAuth" idTokenLife="5" includeSriInIdToken="false" includeUserInfoInIdToken="false" policyName="DelAuth" accessTokenManagerId="DelAuth">
+    <urn:ProviderPolicyGroup policyId="DelAuth" idTokenLife="5" includeSriInIdToken="false" includeUserInfoInIdToken="false" includeSHashInIdToken="false" policyName="DelAuth" accessTokenManagerId="DelAuth">
         <urn:UserInfoMapping>
             <urn1:AttributeMap Name="sub" Type="Token" Value="sub" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
             <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         </urn:UserInfoMapping>
+        <urn:scopeAttributesMap/>
+        <urn:attributeContractInclusionMap/>
     </urn:ProviderPolicyGroup>
 </urn:OpenIdConnectProviderPolicy>

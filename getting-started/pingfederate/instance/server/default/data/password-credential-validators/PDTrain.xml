@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urn:PluginConfiguration isInheritExtendedContractAttributes="false" name="PDTrain" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
     <urn:Fields>
-        <urn:Field name="LDAP Datastore">LDAP-B608D40FBA7EE0BCD66C62B85C1C8216F64F37F7</urn:Field>
+        <urn:Field name="LDAP Datastore">LDAP-17228D7D099DC74D41480815A3FB1A2F588B658E</urn:Field>
         <urn:Field name="Search Base">dc=pdtrain,dc=com</urn:Field>
         <urn:Field name="Search Filter">(|(uid=${username})(mail=${username}))</urn:Field>
         <urn:Field name="Scope of Search">Subtree</urn:Field>
@@ -10,12 +10,20 @@
         <urn:Field name="Mail Attribute">mail</urn:Field>
         <urn:Field name="SMS Attribute"/>
         <urn:Field name="PingID Username Attribute"/>
+        <urn:Field name="Mail Search Filter"/>
+        <urn:Field name="Username Attribute"/>
+        <urn:Field name="Mail Verified Attribute"/>
+        <urn:Field name="Enable PingDirectory Detailed Password Policy Requirement Messaging">true</urn:Field>
     </urn:Fields>
     <urn:AdvancedFields>
         <urn:Field name="Display Name Attribute">displayName</urn:Field>
         <urn:Field name="Mail Attribute">mail</urn:Field>
         <urn:Field name="SMS Attribute"/>
         <urn:Field name="PingID Username Attribute"/>
+        <urn:Field name="Mail Search Filter"/>
+        <urn:Field name="Username Attribute"/>
+        <urn:Field name="Mail Verified Attribute"/>
+        <urn:Field name="Enable PingDirectory Detailed Password Policy Requirement Messaging">true</urn:Field>
     </urn:AdvancedFields>
     <urn:Tables>
         <urn:Table name="Authentication Error Overrides"/>

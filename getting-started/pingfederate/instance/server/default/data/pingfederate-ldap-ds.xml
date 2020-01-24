@@ -1,23 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ldap:ldap-sources xmlns:ldap="http://pingidentity.com/2004/09/ldap-ds">
-    <ldap:ldap-source id="LDAP-3CFB9DD7D8F2061E23F562FA53BACA9EAB7D42E5" maskAttributeValues="false" ldapType="ActiveDirectory" ldapTypeDesc="Active Directory" testOnBorrow="false" testOnReturn="false" createIfNecessary="true" minIdle="10" maxActive="100" maxWait="-1" timeBetweenEvictionRunsMillis="60000" readTimeoutMillis="3000" connTimeoutMillis="3000" verifyHost="false">
+    <ldap:ldap-source id="LDAP-3CFB9DD7D8F2061E23F562FA53BACA9EAB7D42E5" maskAttributeValues="false" ldapType="ActiveDirectory" ldapTypeDesc="Active Directory" testOnBorrow="false" testOnReturn="false" createIfNecessary="true" minIdle="10" maxActive="100" maxWait="-1" timeBetweenEvictionRunsMillis="60000" readTimeoutMillis="3000" connTimeoutMillis="3000" verifyHost="false" dnsTtlMillis="60000" ldapDnsSrvPrefix="_ldap._tcp" ldapsDnsSrvPrefix="_ldaps._tcp">
         <ldap:host>win-4rpmpsk1u13.sso.test-win4.com</ldap:host>
         <ldap:principal>SSOTESTWIN4\lookup</ldap:principal>
         <ldap:use-ssl>true</ldap:use-ssl>
-        <ldap:credentials>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoieXBRZnV4MUtyciIsInZlcnNpb24iOiI4LjQuNC4wIn0..xrrwOqN8ckeLUEMXnRNwhQ.i8kIAXlmViqJ2zMk22zcHw.6kj1exdBv6YOKGJJHf7dXQ</ldap:credentials>
+        <ldap:use-dns-srv-records>false</ldap:use-dns-srv-records>
+        <ldap:credentials>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoieXBRZnV4MUtyciIsInZlcnNpb24iOiI5LjMuMy4zIn0..Bl_uGNJvBEzdMr7Kp3zpaA.EE49aAHXfMiGywpPPNueJQ.JT2ckEOAs9l_h9lcMg2-wQ</ldap:credentials>
         <ldap:authenticationMeth>simple</ldap:authenticationMeth>
-        <ldap:description>win-4rpmpsk1u13.sso.test-win4.com</ldap:description>
+        <ldap:description>win-4rpmpsk1u13.sso.test-win4.com (SSOTESTWIN4\lookup)</ldap:description>
+        <ldap:name>win-4rpmpsk1u13.sso.test-win4.com (SSOTESTWIN4\lookup)</ldap:name>
         <ldap:binaryAttributes>
             <ldap:binaryAttribute>objectGUID</ldap:binaryAttribute>
         </ldap:binaryAttributes>
     </ldap:ldap-source>
-    <ldap:ldap-source id="LDAP-B608D40FBA7EE0BCD66C62B85C1C8216F64F37F7" maskAttributeValues="false" ldapType="PingDirectory" ldapTypeDesc="PingDirectory" testOnBorrow="false" testOnReturn="false" createIfNecessary="true" minIdle="10" maxActive="100" maxWait="-1" timeBetweenEvictionRunsMillis="60000" readTimeoutMillis="3000" connTimeoutMillis="3000" verifyHost="false">
+    <ldap:ldap-source id="LDAP-B608D40FBA7EE0BCD66C62B85C1C8216F64F37F7" maskAttributeValues="false" ldapType="PingDirectory" ldapTypeDesc="PingDirectory" testOnBorrow="false" testOnReturn="false" createIfNecessary="true" minIdle="10" maxActive="100" maxWait="-1" timeBetweenEvictionRunsMillis="60000" readTimeoutMillis="3000" connTimeoutMillis="3000" verifyHost="false" dnsTtlMillis="60000" ldapDnsSrvPrefix="_ldap._tcp" ldapsDnsSrvPrefix="_ldaps._tcp">
         <ldap:host>10.101.61.142:1636</ldap:host>
         <ldap:principal>cn=dmanager</ldap:principal>
         <ldap:use-ssl>true</ldap:use-ssl>
-        <ldap:credentials>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoieXBRZnV4MUtyciIsInZlcnNpb24iOiI4LjQuNC4wIn0..dFl0SQFm5U4f4jzQdVf6hA.vbQ29BIhpO2EMfCmnZj0Kg.sqCW_Obz69Dd18LT4zGnpQ</ldap:credentials>
+        <ldap:use-dns-srv-records>false</ldap:use-dns-srv-records>
+        <ldap:credentials>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoieXBRZnV4MUtyciIsInZlcnNpb24iOiI5LjMuMy4zIn0..zcGcLhmZ0nea9lOsv1Kokg.HI5vCFcBE8iQUB0G62LoUg.QGczJooB7jFOs0rIMw9vMQ</ldap:credentials>
         <ldap:authenticationMeth>simple</ldap:authenticationMeth>
-        <ldap:description>10.101.61.142:1636</ldap:description>
+        <ldap:description>10.101.61.142:1636 (cn=dmanager)</ldap:description>
+        <ldap:name>10.101.61.142:1636 (cn=dmanager)</ldap:name>
+        <ldap:binaryAttributes/>
+    </ldap:ldap-source>
+    <ldap:ldap-source id="LDAP-17228D7D099DC74D41480815A3FB1A2F588B658E" maskAttributeValues="false" ldapType="PingDirectory" ldapTypeDesc="PingDirectory" testOnBorrow="false" testOnReturn="false" createIfNecessary="true" minIdle="10" maxActive="100" maxWait="-1" timeBetweenEvictionRunsMillis="60000" readTimeoutMillis="3000" connTimeoutMillis="3000" verifyHost="true" dnsTtlMillis="60000" ldapDnsSrvPrefix="_ldap._tcp" ldapsDnsSrvPrefix="_ldaps._tcp">
+        <ldap:host>pingdirectory</ldap:host>
+        <ldap:principal>cn=dmanager</ldap:principal>
+        <ldap:use-ssl>false</ldap:use-ssl>
+        <ldap:use-dns-srv-records>false</ldap:use-dns-srv-records>
+        <ldap:credentials>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoieXBRZnV4MUtyciIsInZlcnNpb24iOiI5LjMuMy4zIn0..GTuvv1JdheZJrbZRM-H0Bg.xYn6pCRgUfqLZcfLWTMbDQ.3QUxGN8KkxSzXUNRgky1xQ</ldap:credentials>
+        <ldap:authenticationMeth>simple</ldap:authenticationMeth>
+        <ldap:description>Docker-PD</ldap:description>
+        <ldap:name>Docker-PD</ldap:name>
         <ldap:binaryAttributes/>
     </ldap:ldap-source>
 </ldap:ldap-sources>

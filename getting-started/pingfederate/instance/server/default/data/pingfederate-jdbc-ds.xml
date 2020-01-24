@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <datasources>
     <local-tx-datasource maskAttributeValues="false">
-        <description>jdbc:hsqldb:${pf.server.data.dir}${/}hypersonic${/}ProvisionerDefaultDB;hsqldb.lock_file=false</description>
+        <description>jdbc:hsqldb:${pf.server.data.dir}${/}hypersonic${/}ProvisionerDefaultDB;hsqldb.lock_file=false (sa)</description>
+        <name>jdbc:hsqldb:${pf.server.data.dir}${/}hypersonic${/}ProvisionerDefaultDB;hsqldb.lock_file=false (sa)</name>
         <jndi-name>ProvisionerDS</jndi-name>
         <connection-url>jdbc:hsqldb:${pf.server.data.dir}${/}hypersonic${/}ProvisionerDefaultDB;hsqldb.lock_file=false</connection-url>
         <driver-class>org.hsqldb.jdbcDriver</driver-class>
         <user-name>sa</user-name>
-        <password>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoieXBRZnV4MUtyciIsInZlcnNpb24iOiI4LjQuNC4wIn0..eV6CLpMDe4ZX4xJIzNfvrQ.ZvcAcbX8MVr1GQU-jFlv9g.MMuVaHEA8tymSHEpo16avw</password>
+        <password>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoieXBRZnV4MUtyciIsInZlcnNpb24iOiI5LjMuMy4zIn0..z-lGRkbGjfbLO4jZFSeYWg.gEw3pYT5AuVX7vLjTGHYug.u-Iqf8TYVRHdLBkfdw3-LQ</password>
         <ping-db-type>Custom</ping-db-type>
         <allow-multi-value-attributes>false</allow-multi-value-attributes>
     </local-tx-datasource>
     <local-tx-datasource maskAttributeValues="false">
-        <description>jdbc:mysql://localhost/sys?autoReconnect=true</description>
+        <description>jdbc:mysql://localhost/sys?autoReconnect=true (Admin)</description>
+        <name>jdbc:mysql://localhost/sys?autoReconnect=true (Admin)</name>
         <jndi-name>JDBC-D5D2C7E257A6C5071F9948AEA4DD34DB751C0382</jndi-name>
         <connection-url>jdbc:mysql://localhost/sys?autoReconnect=true</connection-url>
         <driver-class>com.mysql.jdbc.Driver</driver-class>
         <user-name>Admin</user-name>
-        <password>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoieXBRZnV4MUtyciIsInZlcnNpb24iOiI4LjQuNC4wIn0..0YZtu3HYOduZrqFPbCkOMw.8UlZD3lleXdrUQuK67Eoyw.FyAS-gXr0ywudQQOzQJcdg</password>
+        <password>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoieXBRZnV4MUtyciIsInZlcnNpb24iOiI5LjMuMy4zIn0..lWZKlvNrtalrMkEWHkoNgg.sSXDYjaSJRqiXesL7QTnDg.VjonNGI7LuJHX1behPkxpQ</password>
         <check-valid-connection-sql>SELECT 1 from dual;</check-valid-connection-sql>
         <ping-db-type>Custom</ping-db-type>
         <allow-multi-value-attributes>true</allow-multi-value-attributes>

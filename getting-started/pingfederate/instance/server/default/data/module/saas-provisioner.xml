@@ -6,13 +6,14 @@
       <parameter name="groupsUrl" value="https://scim.connect.pingidentity.com/prov-service/v1/Groups"/>
       <parameter name="authentication" value="basic"/>
       <parameter name="basicAuthUser" value="prov-79aJdj4su6"/>
-      <parameter name="basicAuthPass" value="OBF:JWE:eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoieXBRZnV4MUtyciIsInZlcnNpb24iOiI4LjQuNC4wIn0..AH7dQB68EyW5VkEzRK402Q.ej66qZ1ZvouegA1wjKUnri8skmg6adMh4ZUdZRoSPdo.okX0qQ-lwkjsrEnO1ALZbA"/>
+      <parameter name="basicAuthPass" value="OBF:JWE:eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoieXBRZnV4MUtyciIsInZlcnNpb24iOiI5LjMuMy4zIn0..Vj-N0-ZXvU6WIW5zIHwEoQ.2aQSCu-GDrHYVdHY8dBbmhhMQ3u2tNSvs60MhsjC2H0.DSDp3rSC7XrupdlJ04Njiw"/>
       <parameter name="clientId" value=""/>
-      <parameter name="clientSecret" value="OBF:JWE:eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoieXBRZnV4MUtyciIsInZlcnNpb24iOiI4LjQuNC4wIn0..W6CEXjPF2_LRqGXUGoswQg.NCwvP757CndvPaev4e0dbg.h74je7-kCmmGES424gh8Pg"/>
+      <parameter name="clientSecret" value="OBF:JWE:eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoieXBRZnV4MUtyciIsInZlcnNpb24iOiI5LjMuMy4zIn0..R-9lKtIRc-6oY1AHFeV7vw.nPkdIW39Rezo7ykK97PggQ.Psec7wcopk3_dT3aLkqgHA"/>
       <parameter name="tokenEndpoint" value=""/>
       <parameter name="isPatchSupported" value="true"/>
       <parameter name="useDnAsGroupName" value="true"/>
       <parameter name="deprovisionMethod" value="deleteUser"/>
+      <parameter name="rateLimitErrorCode" value=""/>
     </target>
     <channel id="1" name="Channel 1" active="false">
       <maxThreads>1</maxThreads>
