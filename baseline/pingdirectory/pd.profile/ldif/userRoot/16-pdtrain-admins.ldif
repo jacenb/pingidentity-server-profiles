@@ -1,0 +1,30 @@
+# LDIF export started at 20200124225658.354Z
+# Included branch:  uid=admin,dc=pdtrain,dc=com
+# Include operational attributes:  false
+
+dn: uid=admin,dc=pdtrain,dc=com
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+sn: User
+cn: Admin User
+givenName: Admin
+userPassword: {SSHA256}hr06KaiKJCAWc5rlJMTclK2i5rre2UAYA2yugFGuxsotlg7zRbLvFA==
+uid: admin
+
+# LDIF export started at 20200124225837.784Z
+# Included branch:  uid=da-admin,dc=pdtrain,dc=com
+# Include operational attributes:  false
+
+dn: uid=da-admin,dc=pdtrain,dc=com
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+sn: Admin
+cn: DA Admin
+givenName: DA
+userPassword: {SSHA256}toXFZMQFWV7xylPKIVieKaENBTL5kepvNItVd1DtBMJ9vzOibqOCPg==
+uid: da-admin
+
