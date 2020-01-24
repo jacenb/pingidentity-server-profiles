@@ -1,25 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:config xmlns:con="http://www.sourceid.org/2004/05/config">
-    <con:map name="SP:REFID">
-        <con:item name="a5efdcvwwi7bl9glkx6ql4k0y">SP</con:item>
-    </con:map>
-    <con:map name="IDP:REFID"/>
-    <con:map name="http://pingone.com/ecd7c091-9794-41f1-8d5f-f281f46d5396"/>
-    <con:map name="SP:IWA"/>
-    <con:map name="IDP:IWA"/>
-    <con:map name="SP:IWA&amp;TestResource=Test"/>
-    <con:map name="SP:TEST1"/>
-    <con:map name="IDP:TEST1"/>
-    <con:map name="SP:REFAL"/>
-    <con:map name="IDP:REFAL"/>
-    <con:map name="OAuth"/>
-    <con:map name="IDP:OAuth"/>
-    <con:map name="SP:OAuth"/>
-    <con:map name="SP:STS"/>
-    <con:map name="IDP:STS"/>
-    <con:map name="SP:OTKAL"/>
-    <con:map name="IDP:OTKAL"/>
-    <con:map name="SP:Bearer"/>
-    <con:map name="SP:OTK"/>
-    <con:map name="IDP:OTK"/>
 </con:config>

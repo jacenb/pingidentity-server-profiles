@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:config xmlns:con="http://www.sourceid.org/2004/05/config">
     <con:map name="SsoDirectoryService">
-        <con:item name="id"/>
-        <con:item name="confirmSharedSecret"/>
-        <con:item name="isActive">true</con:item>
-        <con:item name="sharedSecret"/>
+        <con:item name="isActive">false</con:item>
     </con:map>
-    <con:map name="JMX"/>
-    <con:map name="ConnectionManagement">
-        <con:item name="confirmSharedSecret">L9jUVTTde31pVwvdBFX_hzaWp8zGoiwGPhHolT4VFZY.qsRYrjoE.2</con:item>
-        <con:item name="id">mgmt-ws</con:item>
-        <con:item name="isActive">true</con:item>
-        <con:item name="sharedSecret">L9jUVTTde31pVwvdBFX_hzaWp8zGoiwGPhHolT4VFZY.qsRYrjoE.2</con:item>
-    </con:map>
-    <con:map name="AttributeQuery"/>
 </con:config>
