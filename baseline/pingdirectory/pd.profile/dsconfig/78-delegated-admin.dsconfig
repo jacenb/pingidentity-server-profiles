@@ -29,6 +29,41 @@ dsconfig create-delegated-admin-attribute --type-name users --attribute-type ds-
 dsconfig create-delegated-admin-attribute --type-name groups --attribute-type cn --set "display-name:Group"
 dsconfig create-delegated-admin-attribute --type-name groups --attribute-type description --set "display-name:Description"
 
+# 
+# Create REST Resource rights for the Delegated Admin.
+# 
+dsconfig create-delegated-admin-rights \
+    --rights-name da-admin  \
+    --set enabled:true  \
+    --set admin-user-dn:uid=da-admin,${USER_BASE_DN}
+
+#
+# Create and tie Groups resource access to the Delegated Admin REST Resource rights.
+#
+dsconfig create-delegated-admin-resource-rights \
+    --rights-name da-admin  \
+    --rest-resource-type groups  \
+    --set enabled:true  \
+    --set admin-permission:create  \
+    --set admin-permission:delete  \
+    --set admin-permission:manage-group-membership  \
+    --set admin-permission:read  \
+    --set admin-permission:update  \
+    --set resources-in-group:cn=SCIM-Test-Group,ou=Groups,${USER_BASE_DN} 
+
+#
+# Create and tie Users resource access to the Delegated Admin REST Resource rights.
+#
+dsconfig create-delegated-admin-resource-rights \
+    --rights-name da-admin  \
+    --rest-resource-type users  \
+    --set enabled:true  \
+    --set admin-permission:create  \
+    --set admin-permission:delete  \
+    --set admin-permission:read  \
+    --set admin-permission:update  \
+    --set resources-in-group:cn=SCIM-Test-Group,ou=Groups,${USER_BASE_DN} 
+
 #
 # Create an access token validator for PingFederate tokens.
 #
