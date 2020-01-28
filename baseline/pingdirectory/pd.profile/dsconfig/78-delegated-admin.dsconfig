@@ -44,7 +44,7 @@ dsconfig create-delegated-admin-resource-rights \
     --rights-name da-admin  \
     --rest-resource-type groups  \
     --set admin-scope:resources-in-specific-subtrees \
-    --set resource-subtree:ou=Groups,${USER_BASE_DN} \    
+    --set resource-subtree:ou=Groups,${USER_BASE_DN} \
     --set enabled:true  \
     --set admin-permission:create  \
     --set admin-permission:delete  \
