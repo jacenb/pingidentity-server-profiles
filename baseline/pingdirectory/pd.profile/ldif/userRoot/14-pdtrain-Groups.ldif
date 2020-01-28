@@ -10,21 +10,21 @@
 
 dn: cn=SCIM-Test-Group,ou=Groups,dc=pdtrain,dc=com
 objectClass: Top
-objectClass: groupOfUniqueNames
-uniqueMember: uid=user.0,ou=People,dc=pdtrain,dc=com
-uniqueMember: uid=user.1,ou=People,dc=pdtrain,dc=com
-uniqueMember: uid=user.2,ou=People,dc=pdtrain,dc=com
-uniqueMember: uid=user.3,ou=People,dc=pdtrain,dc=com
-uniqueMember: uid=user.4,ou=People,dc=pdtrain,dc=com
-uniqueMember: uid=testApplication,ou=applications,dc=pdtrain,dc=com
+objectClass: groupOfNames
+member: uid=user.0,ou=People,dc=pdtrain,dc=com
+member: uid=user.1,ou=People,dc=pdtrain,dc=com
+member: uid=user.2,ou=People,dc=pdtrain,dc=com
+member: uid=user.3,ou=People,dc=pdtrain,dc=com
+member: uid=user.4,ou=People,dc=pdtrain,dc=com
+member: uid=testApplication,ou=applications,dc=pdtrain,dc=com
 cn: SCIM-Test-Group
 
 dn: cn=Test Password Policy,ou=Groups,dc=pdtrain,dc=com
 objectClass: top
-objectClass: groupOfUniqueNames
-uniqueMember: uid=user.0,ou=People,dc=pdtrain,dc=com
-uniqueMember: uid=user.20,ou=People,dc=pdtrain,dc=com
-uniqueMember: uid=user.21,ou=People,dc=pdtrain,dc=com
-uniqueMember: uid=user.22,ou=People,dc=pdtrain,dc=com
-uniqueMember: uid=user.23,ou=People,dc=pdtrain,dc=com
+objectClass: groupOfNames
+member: uid=user.0,ou=People,dc=pdtrain,dc=com
+member: uid=user.20,ou=People,dc=pdtrain,dc=com
+member: uid=user.21,ou=People,dc=pdtrain,dc=com
+member: uid=user.22,ou=People,dc=pdtrain,dc=com
+member: uid=user.23,ou=People,dc=pdtrain,dc=com
 cn: Test Password Policy
