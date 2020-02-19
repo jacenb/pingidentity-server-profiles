@@ -2,6 +2,22 @@ dsconfig set-trust-manager-provider-prop \
 	--provider-name "Blind Trust" \
 	--set enabled:true
 
+#
+# Status:Creating External Servers
+#
+dsconfig create-external-server \
+    --server-name pingdirectory:636 \
+    --set server-host-name:pingdirectory \
+    --set server-port:636 \
+    --type ping-identity-ds \
+    --set "bind-dn:cn=pingdatagovernance,cn=Root DNs,cn=config" \
+    --set password<${ROOT_USER_PASSWORD_FILE} \
+    --set authorization-method:none \
+    --set location:${LOCATION} \
+    --set connection-security:ssl \
+    --set key-manager-provider:Null \
+    --set trust-manager-provider:JKS
+
 dsconfig create-external-server \
 	--server-name pingdatagovernancepap \
 	--type policy \
@@ -13,9 +29,21 @@ dsconfig create-external-server \
 	--set decision-node:e51688ff-1dc9-4b6c-bb36-8af64d02e9d1 \
 	--set branch:defaultPolicies.SNAPSHOT
 
-# dsconfig set-external-server-prop \
-#	--server-name pingdirectory:636 \
-#	--set "trust-manager-provider:Blind Trust
+ dsconfig set-external-server-prop \
+	--server-name pingdirectory:636 \
+	--set "trust-manager-provider:Blind Trust
+
+dsconfig create-load-balancing-algorithm \
+    --type failover \
+    --algorithm-name user-store-lba \
+    --set enabled:true \
+    --set backend-server:pingdirectory:636
+
+dsconfig set-connection-handler-prop \
+    --handler-name "HTTPS Connection Handler" \
+    --set enabled:true \
+    --set key-manager-provider:JKS \
+    --set trust-manager-provider:JKS
 
 dsconfig set-policy-decision-service-prop \
 	--set pdp-mode:external \
@@ -29,6 +57,18 @@ dsconfig create-access-token-validator \
 dsconfig set-http-servlet-extension-prop \
 	--extension-name SCIM2 \
 	--set "access-token-validator:Mock ATV"
+
+#
+# Status:Configuring Store Adapters
+#
+
+dsconfig set-store-adapter-prop \
+    --adapter-name UserStoreAdapter \
+    --set enabled:true \
+    --set structural-ldap-objectclass:inetOrgPerson \
+    --set include-base-dn:ou=people,dc=example,dc=com \
+    --set create-dn-pattern:entryUUID=server-generated,ou=people,dc=example,dc=com \
+    --set load-balancing-algorithm:user-store-lba
 
 #
 # Status:Configuring Schema
