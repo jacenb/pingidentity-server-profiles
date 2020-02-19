@@ -30,6 +30,25 @@ dsconfig set-http-servlet-extension-prop \
 	--extension-name SCIM2 \
 	--set "access-token-validator:Mock ATV"
 
+#
+# Status:Configuring Schema
+#
+
+#
+# This dsconfig batch file creates a pass-through SCIM resource type within the
+# Data Governance Server. A pass-through SCIM resource type automatically maps
+# the schema of a particular LDAP objectclass to a SCIM schema. These settings
+# are applied by the create-initial-config tool automatically when the
+# pass-through schema option is selected.
+#
+
+dsconfig create-scim-resource-type \
+    --type-name Users --type pass-through \
+    --set enabled:true \
+    --set endpoint:Users \
+    --set primary-store-adapter:UserStoreAdapter \
+    --set id-attribute:entryUUID
+
 dsconfig create-token-resource-lookup-method \
 	--validator-name "Mock ATV" \
 	--method-name scim-entry-uuid \
