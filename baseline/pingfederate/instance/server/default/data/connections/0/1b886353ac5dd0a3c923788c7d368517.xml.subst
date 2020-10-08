@@ -22,7 +22,7 @@
             <urn:RoleExtension ArtifactTimeoutSeconds="60" LastModified="2019-10-11T14:03:10.306-06:00">
                 <urn:IncomingBindings Artifact="true" POST="true" Redirect="true" SOAP="true"/>
                 <urn:EnabledProfiles IDPInitiatedSSO="true" IDPInitiatedSLO="false" SPInitiatedSSO="true" SPInitiatedSLO="false"/>
-                <urn:IDP AssertionsSigned="false" DefaultTargetResource="">
+                <urn:IDP AssertionsSigned="false" DefaultTargetResource="https://pingfederate-${PING_IDENTITY_K8S_NAMESPACE}.ping-devops.com/SpSample/MainPage">
                     <urn:TargetAttributeMapping AdapterInstanceId="SPOTK" RestrictVirtualServerIds="false">
                         <urn:AttributeMap Name="mail" Type="Text" Value="jasonbradley@pingidentity.com"/>
                         <urn:AttributeMap Name="displayName" Type="Text" Value="jasontest"/>
