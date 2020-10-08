@@ -1,9 +1,9 @@
 #Config
-#Thu Apr 12 12:42:20 ADT 2012
-hostPF=localhost
+#Thu Apr 12 12:36:24 ADT 2012
+hostPF=https://pingfederate-${PING_IDENTITY_K8S_NAMESPACE}.ping-devops.com
 useSSL=true
 httpPort=9030
-httpsPort=9031
+httpsPort=443
 contextPathPF=/
 wsUname=heuristics
 wsPwd=Changeme1

@@ -158,7 +158,7 @@
 					jQuery.ajax({
 						type : "GET",
 						dataType : "json",
-						url : "https://localhost:9031/.well-known/openid-configuration",
+						url : "https://pingfederate-${PING_IDENTITY_K8S_NAMESPACE}.ping-devops.com/.well-known/openid-configuration",
 						success : function(data,status,xhr) {
 							jQuery("#result").append("<div class=\"ping-data-header first\">Response Code: <span>"+xhr.status+"</span></div>");
 							jQuery("#result").append("<div class=\"ping-data-header\">Response Headers:</div>");

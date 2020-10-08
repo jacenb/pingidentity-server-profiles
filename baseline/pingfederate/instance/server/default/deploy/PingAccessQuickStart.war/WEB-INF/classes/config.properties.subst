@@ -1,0 +1,5 @@
+# PingAccess Server Properties
+pa.runtime=https://pingaccess-${PING_IDENTITY_K8S_NAMESPACE}.ping-devops.com
+
+# PingFederate Server Properties
+pf.runtime=https://pingfederate-${PING_IDENTITY_K8S_NAMESPACE}.ping-devops.com
