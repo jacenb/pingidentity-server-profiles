@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:Source2TargetPluginMappings xmlns:urn="urn:pingidentity.com:pf:src2tgt">
+    <urn:Source2TargetPluginMapping sourcePluginId="UsernameTokenProcessor" targetPluginId="saml2" countForLicense="true">
+        <urn:AttributeMapping>
+            <urn1:AttributeMap Name="mail" Type="Token" Value="mail" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="displayName" Type="Token" Value="displayName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="surname" Type="Token" Value="surname" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="givenName" Type="Token" Value="givenName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="memberOf" Type="Token" Value="memberOf" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="SAML_SUBJECT" Type="Token" Value="userPrincipalName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="userPrincipalName" Type="Token" Value="userPrincipalName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="username" Type="Token" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        </urn:AttributeMapping>
+    </urn:Source2TargetPluginMapping>
+</urn:Source2TargetPluginMappings>

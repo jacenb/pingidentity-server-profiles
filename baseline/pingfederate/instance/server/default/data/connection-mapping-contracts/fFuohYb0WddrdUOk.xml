@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c2c:c2cContract id="fFuohYb0WddrdUOk" name="LocalID" xmlns:c2c="http://pingidentity.com/2014/10/c2cContracts">
+    <c2c:extendedAttributes>
+        <c2c:attr name="Email"/>
+        <c2c:attr name="UserName"/>
+        <c2c:attr name="GivenName"/>
+        <c2c:attr name="SurName"/>
+    </c2c:extendedAttributes>
+</c2c:c2cContract>

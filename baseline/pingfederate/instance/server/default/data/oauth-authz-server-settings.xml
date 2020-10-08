@@ -1,23 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urn:OAuthConfig enableOAuth="true" authzCodeLength="30" authzCodeTimeout="60" rollRefreshTokens="false" rollingInterval="0" refreshTokenLength="42" atmIdForOAuthGrantManagement="" scopeForOAuthGrantManagement="" globalPersistentGrantExpirationTime="-1" globalPersistentGrantExpirationTimeUnit="d" globalPersistentGrantIdleTimeout="30" globalPersistentGrantIdleTimeoutTimeUnit="d" tokenEndpointBaseUrl="" userAuthzUrl="" registeredAuthzPath="" pendingAuthzTimeout="600" bypassActivationCodeConfirmation="false" devicePollingInterval="5" authzConsentSetting="INTERNAL" xmlns:urn="urn:pingidentity.com:pf:oauth:conf">
-    <urn:UserKeyToAccessTokenMapping contextId="password|pingdirectory" tokenManagerId="jwt">
-        <urn1:AttributeMap Name="Username" Type="Password Credential Validator" Value="pcv.mail" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
-        <urn1:AttributeMap Name="OrgName" Type="Text" Value="PingIdentity" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+<urn:OAuthConfig enableOAuth="true" authzCodeLength="30" authzCodeTimeout="60" rollRefreshTokens="true" rollingInterval="0" refreshTokenLength="42" selectedPcv="UserPass" atmIdForOAuthGrantManagement="" scopeForOAuthGrantManagement="" globalPersistentGrantExpirationTime="-1" globalPersistentGrantExpirationTimeUnit="d" globalPersistentGrantIdleTimeout="-1" globalPersistentGrantIdleTimeoutTimeUnit="d" tokenEndpointBaseUrl="" userAuthzUrl="" registeredAuthzPath="" pendingAuthzTimeout="600" bypassActivationCodeConfirmation="false" devicePollingInterval="5" authzConsentSetting="" externalConsentAdapterId="" returnedScopeAttributeName="" xmlns:urn="urn:pingidentity.com:pf:oauth:conf">
+    <urn:UserKeyToAccessTokenMapping contextId="default" tokenManagerId="default">
+        <urn1:AttributeMap Name="Username" Type="Persistent Grant" Value="USER_KEY" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="OrgName" Type="Text" Value="Ping" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="SpAdapter" Type="Text" Value="Apache331" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
     </urn:UserKeyToAccessTokenMapping>
-    <urn:UserKeyToAccessTokenMapping contextId="authz_req|apc.Zxp6N6W5PH9onACT" tokenManagerId="jwt">
+    <urn:UserKeyToAccessTokenMapping contextId="authz_req|apc.oMMqM7uoBeNDPrWz" tokenManagerId="APC">
+        <urn1:AttributeMap Name="tracClientCode" Type="Text" Value="YoMama" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="oid" Type="Authentication Policy Contract" Value="apc.OID" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="given_name" Type="Authentication Policy Contract" Value="apc.FirstName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="family_name" Type="Authentication Policy Contract" Value="apc.LastName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="email" Type="Authentication Policy Contract" Value="apc.Mail" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+    </urn:UserKeyToAccessTokenMapping>
+    <urn:UserKeyToAccessTokenMapping contextId="authz_req|apc.s4stUpQ3Si27SwoB" tokenManagerId="default">
         <urn1:AttributeMap Name="Username" Type="Authentication Policy Contract" Value="apc.subject" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="OrgName" Type="Other" AttributeSourceId="AdminAPI" Value="AdapterId" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="SpAdapter" Type="Authentication Policy Contract" Value="apc.SpAdapter" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeSource Id="AdminAPI" Description="AdminAPI" Type="Other" DataSourceId="Other-716EE2310FDDBA3B0668BA86F3C1438A8BC1C2AB" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2">
+            <urn1:Parameter Name="Authorization Header" Value=""/>
+            <urn1:Parameter Name="Resource Path" Value="/sp/adapters/${apc.SpAdapter}"/>
+        </urn1:AttributeSource>
+        <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+    </urn:UserKeyToAccessTokenMapping>
+    <urn:UserKeyToAccessTokenMapping contextId="default" tokenManagerId="jwt">
+        <urn1:AttributeMap Name="aud" Type="Context" Value="context.ClientId" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="Username" Type="Persistent Grant" Value="USER_KEY" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:AttributeMap Name="OrgName" Type="Text" Value="PingIdentity" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
     </urn:UserKeyToAccessTokenMapping>
-    <urn:PasswordCredentialValidatorToUserKeyMapping sourcePluginId="pingdirectory">
-        <urn1:AttributeMap Name="USER_KEY" Type="Password Credential Validator" Value="mail" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+    <urn:AdapterToUserKeyMapping sourcePluginId="HTMLFormSimplePCV">
+        <urn1:AttributeMap Name="USER_NAME" Type="Adapter" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="USER_KEY" Type="Adapter" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+    </urn:AdapterToUserKeyMapping>
+    <urn:PasswordCredentialValidatorToUserKeyMapping sourcePluginId="UserPass">
+        <urn1:AttributeMap Name="USER_KEY" Type="Password Credential Validator" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
     </urn:PasswordCredentialValidatorToUserKeyMapping>
-    <urn:ApcToUserKeyMapping sourcePluginId="Zxp6N6W5PH9onACT">
+    <urn:ApcToUserKeyMapping sourcePluginId="s4stUpQ3Si27SwoB">
         <urn1:AttributeMap Name="USER_NAME" Type="Authentication Policy Contract" Value="subject" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:AttributeMap Name="USER_KEY" Type="Authentication Policy Contract" Value="subject" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
     </urn:ApcToUserKeyMapping>
+    <urn:ApcToUserKeyMapping sourcePluginId="oMMqM7uoBeNDPrWz">
+        <urn1:AttributeMap Name="USER_NAME" Type="Authentication Policy Contract" Value="Mail" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="USER_KEY" Type="Authentication Policy Contract" Value="Mail" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+    </urn:ApcToUserKeyMapping>
     <urn:ReuseExistingPersistentGrantForGrant>implicit</urn:ReuseExistingPersistentGrantForGrant>
+    <urn:ReuseExistingPersistentGrantForGrant>authorization_code</urn:ReuseExistingPersistentGrantForGrant>
+    <urn:allowedOrigins>https://localhost:4200</urn:allowedOrigins>
+    <urn:allowedOrigins>https://localhost:5050</urn:allowedOrigins>
+    <urn:allowedOrigins>https://localhost:3000</urn:allowedOrigins>
 </urn:OAuthConfig>

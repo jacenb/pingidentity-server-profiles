@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:config xmlns:con="http://www.sourceid.org/2004/05/config">
-    <con:map name="docker"/>
-    <con:map name="https://httpbin.org"/>
+    <con:map name="https://sso.test-win4.com:9031"/>
+    <con:map name="IDP:OAuth"/>
+    <con:map name="IDP:LocalID"/>
+    <con:map name="IDP:Azure"/>
+    <con:map name="localhost:default:entityId"/>
+    <con:map name="SPSample"/>
+    <con:map name="SP:Azure"/>
+    <con:map name="IDPSample"/>
+    <con:map name="SP:STS"/>
+    <con:map name="SP:Scim"/>
+    <con:map name="SP:LocalID"/>
+    <con:map name="IDP:STS"/>
+    <con:map name="SP:OAuth"/>
+    <con:map name="https://login.microsoftonline.com/e6c5d84b-2121-4cf5-beb5-d6ce167481c1/v2.0"/>
 </con:config>

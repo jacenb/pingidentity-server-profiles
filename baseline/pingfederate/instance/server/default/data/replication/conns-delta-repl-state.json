@@ -1,0 +1,16 @@
+{
+  "tombstones" : [ {
+    "id" : "zbf-WPZB5GoPqDAc8d7ustrEUuK",
+    "timestamp" : "2020-10-08T15:35:08.506+0000"
+  }, {
+    "id" : "LJrTlwJDDeZt.1MLp-WXnHJw1dh",
+    "timestamp" : "2020-10-08T15:35:18.337+0000"
+  }, {
+    "id" : "OMayO5uVHpNfdlT2R2qTjcUZCN4",
+    "timestamp" : "2020-10-08T15:35:27.034+0000"
+  }, {
+    "id" : "zMQdPzCAHafqeEk6-gr_XLXQ_l7",
+    "timestamp" : "2020-10-08T15:35:31.660+0000"
+  } ],
+  "latestDeleteTimestamp" : "2020-10-08T15:35:31.660+0000"
+}

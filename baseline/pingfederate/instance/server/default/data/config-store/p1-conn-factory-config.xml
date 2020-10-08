@@ -3,7 +3,6 @@
     <c:item name="SigningKeyPairLifetimeDays">1095</c:item>
     <c:item name="SigningKeyPairRotationBufferMins">129600</c:item>
     <c:item name="SigningKeyPairActivationBufferMins">43200</c:item>
-    
     <c:list name="ProvisioningFieldCodes">
         <c:ListItem>userName</c:ListItem>
         <c:ListItem>title</c:ListItem>
@@ -16,4 +15,6 @@
         <c:ListItem>emailType</c:ListItem>
         <c:ListItem>ldapAttributesMap</c:ListItem>
     </c:list>
+    <c:item name="ClusterMetadataUploadDelaySecs">30</c:item>
+    <c:item name="PingOneRetryIntervalSecs">30</c:item>
 </c:config>

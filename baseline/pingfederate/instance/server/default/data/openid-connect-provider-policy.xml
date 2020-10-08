@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urn:OpenIdConnectProviderPolicy enabled="true" defaultPolicyGroupId="OAuthPlayground" trackUserSessionsForLogout="false" xmlns:urn="urn:pingidentity.com:pf:openid:connect:idp:policy">
-    <urn:ProviderPolicyGroup policyId="OAuthPlayground" idTokenLife="5" includeSriInIdToken="false" includeUserInfoInIdToken="false" includeSHashInIdToken="false" policyName="OAuthPlayground" accessTokenManagerId="jwt">
+<urn:OpenIdConnectProviderPolicy enabled="true" defaultPolicyGroupId="OAuthPlayground" trackUserSessionsForLogout="true" xmlns:urn="urn:pingidentity.com:pf:openid:connect:idp:policy">
+    <urn:ProviderPolicyGroup policyId="OAuthPlayground" idTokenLife="5" includeSriInIdToken="false" includeUserInfoInIdToken="false" includeSHashInIdToken="true" returnIdTokenOnRefreshGrant="false" policyName="OAuthPlayground" accessTokenManagerId="jwt">
         <urn:UserInfoMapping>
             <urn1:AttributeMap Name="sub" Type="Token" Value="Username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
             <urn1:AttributeMap Name="zoneinfo" Type="Text" Value="America/New_York" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
@@ -32,9 +32,94 @@
         <urn:scopeAttributesMap/>
         <urn:attributeContractInclusionMap/>
     </urn:ProviderPolicyGroup>
-    <urn:ProviderPolicyGroup policyId="pingaccess" idTokenLife="5" includeSriInIdToken="true" includeUserInfoInIdToken="true" includeSHashInIdToken="false" policyName="pingaccess" accessTokenManagerId="jwt">
+    <urn:ProviderPolicyGroup policyId="PA-WAM" idTokenLife="5" includeSriInIdToken="true" includeUserInfoInIdToken="true" includeSHashInIdToken="false" returnIdTokenOnRefreshGrant="false" policyName="PA-WAM" accessTokenManagerId="default">
         <urn:UserInfoMapping>
             <urn1:AttributeMap Name="sub" Type="Token" Value="Username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="zoneinfo" Type="Text" Value="No" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="address.locality" Type="Text" Value="Aurora" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="birthdate" Type="Text" Value="06/15/1977" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="gender" Type="Text" Value="Male" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="preferred_username" Type="Text" Value="Test User" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="locale" Type="Text" Value="Aurora" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="address.country" Type="Text" Value="US" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="updated_at" Type="Text" Value="N/A" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="address.postal_code" Type="Text" Value="80015" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="address.region" Type="Text" Value="Arapahoe" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="nickname" Type="Text" Value="Test" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="email" Type="Text" Value="testuser@pingidentity.com" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="group" Type="Text" Value="sales" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="website" Type="Text" Value="Yes" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="email_verified" Type="Text" Value="testuser@pingidentity.com" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="profile" Type="Token" Value="OrgName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="phone_number_verified" Type="Text" Value="555-555-5555" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="given_name" Type="Text" Value="Test" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="middle_name" Type="Text" Value="A" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="picture" Type="Text" Value="N/A" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="name" Type="Text" Value="Test User" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="phone_number" Type="Text" Value="555-555-5555" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="address.formatted" Type="Text" Value="123 Main St., Aurora, CO 80015" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="family_name" Type="Text" Value="User" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="address.street_address" Type="Text" Value="123 Main St." xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        </urn:UserInfoMapping>
+        <urn:scopeAttributesMap/>
+        <urn:attributeContractInclusionMap/>
+    </urn:ProviderPolicyGroup>
+    <urn:ProviderPolicyGroup policyId="TestAgent" idTokenLife="5" includeSriInIdToken="false" includeUserInfoInIdToken="true" includeSHashInIdToken="false" returnIdTokenOnRefreshGrant="false" policyName="TestAgent" accessTokenManagerId="default">
+        <urn:UserInfoMapping>
+            <urn1:AttributeMap Name="sub" Type="Text" Value="Changeme" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        </urn:UserInfoMapping>
+        <urn:scopeAttributesMap/>
+        <urn:attributeContractInclusionMap/>
+    </urn:ProviderPolicyGroup>
+    <urn:ProviderPolicyGroup policyId="TestAgent2" idTokenLife="5" includeSriInIdToken="false" includeUserInfoInIdToken="true" includeSHashInIdToken="false" returnIdTokenOnRefreshGrant="false" policyName="TestAgent2" accessTokenManagerId="default">
+        <urn:UserInfoMapping>
+            <urn1:AttributeMap Name="sub" Type="Text" Value="Changeme" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        </urn:UserInfoMapping>
+        <urn:scopeAttributesMap/>
+        <urn:attributeContractInclusionMap/>
+    </urn:ProviderPolicyGroup>
+    <urn:ProviderPolicyGroup policyId="DemoApplication" idTokenLife="5" includeSriInIdToken="false" includeUserInfoInIdToken="true" includeSHashInIdToken="false" returnIdTokenOnRefreshGrant="false" policyName="DemoApplication" accessTokenManagerId="default">
+        <urn:UserInfoMapping>
+            <urn1:AttributeMap Name="sub" Type="Text" Value="Changeme" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="username" Type="Text" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="group" Type="Text" Value="group" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        </urn:UserInfoMapping>
+        <urn:scopeAttributesMap/>
+        <urn:attributeContractInclusionMap/>
+    </urn:ProviderPolicyGroup>
+    <urn:ProviderPolicyGroup policyId="CPTOAM04Cycle111g" idTokenLife="5" includeSriInIdToken="false" includeUserInfoInIdToken="true" includeSHashInIdToken="false" returnIdTokenOnRefreshGrant="false" policyName="CPTOAM04Cycle111g" accessTokenManagerId="default">
+        <urn:UserInfoMapping>
+            <urn1:AttributeMap Name="sub" Type="Text" Value="Changeme" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="uid" Type="Text" Value="uid" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="mail" Type="Text" Value="mail" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="group" Type="Text" Value="group" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        </urn:UserInfoMapping>
+        <urn:scopeAttributesMap/>
+        <urn:attributeContractInclusionMap/>
+    </urn:ProviderPolicyGroup>
+    <urn:ProviderPolicyGroup policyId="PASSO" idTokenLife="5" includeSriInIdToken="false" includeUserInfoInIdToken="false" includeSHashInIdToken="false" returnIdTokenOnRefreshGrant="false" policyName="PASSO" accessTokenManagerId="jwt">
+        <urn:UserInfoMapping>
+            <urn1:AttributeMap Name="firstName" Type="Token" Value="Username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="sub" Type="Token" Value="Username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="clientId" Type="Context" Value="context.ClientId" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="admin" Type="Expression" Value="#adminRole = &quot;false&quot;, #admin1 = &quot;jasontest&quot;, #admin2 = &quot;colts87&quot;, #adminRole = #this.get(&quot;Username&quot;).getValue().toString()==#admin1?&quot;true&quot;:#this.get(&quot;Username&quot;).getValue().toString()==#admin2?&quot;true&quot;:&quot;false&quot;" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        </urn:UserInfoMapping>
+        <urn:scopeAttributesMap/>
+        <urn:attributeContractInclusionMap/>
+    </urn:ProviderPolicyGroup>
+    <urn:ProviderPolicyGroup policyId="PATest" idTokenLife="5" includeSriInIdToken="true" includeUserInfoInIdToken="true" includeSHashInIdToken="false" returnIdTokenOnRefreshGrant="false" policyName="PATest" accessTokenManagerId="PATest">
+        <urn:UserInfoMapping>
+            <urn1:AttributeMap Name="sub" Type="Token" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="givenName" Type="Token" Value="givenName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="email" Type="Token" Value="email" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="group" Type="Text" Value="sales" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="username" Type="Token" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
             <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         </urn:UserInfoMapping>
         <urn:scopeAttributesMap/>

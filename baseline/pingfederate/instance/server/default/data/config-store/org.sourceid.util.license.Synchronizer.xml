@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:config xmlns:con="http://www.sourceid.org/2004/05/config">
-    <con:item name="1539243:WARN">2020-01-15</con:item>
+    <con:item name="7cfbca1a4f0a7aac069ca4cd15699d05:N/A:EXPIRED">7cfbca1a4f0a7aac069ca4cd15699d05:N/A:EXPIRED</con:item>
+    <con:item name="7cfbca1a4f0a7aac069ca4cd15699d05:N/A:FINAL_WARN">7cfbca1a4f0a7aac069ca4cd15699d05:N/A:FINAL_WARN</con:item>
+    <con:item name="7cfbca1a4f0a7aac069ca4cd15699d05:N/A:INITIAL_WARN">7cfbca1a4f0a7aac069ca4cd15699d05:N/A:INITIAL_WARN</con:item>
+    <con:item name="7cfbca1a4f0a7aac069ca4cd15699d05:SPSample:EXPIRED">7cfbca1a4f0a7aac069ca4cd15699d05:SPSample:EXPIRED</con:item>
+    <con:item name="7cfbca1a4f0a7aac069ca4cd15699d05:SPSample:FINAL_WARN">7cfbca1a4f0a7aac069ca4cd15699d05:SPSample:FINAL_WARN</con:item>
+    <con:item name="7cfbca1a4f0a7aac069ca4cd15699d05:SPSample:INITIAL_WARN">7cfbca1a4f0a7aac069ca4cd15699d05:SPSample:INITIAL_WARN</con:item>
+    <con:item name="00074595:WARN">2020-09-04</con:item>
+    <con:item name="00074595:GRACE">2020-09-10</con:item>
+    <con:item name="00074595:VIOLATION">2020-09-14</con:item>
+    <con:item name="00076681:WARN">2020-10-06</con:item>
+    <con:item name="00080431:WARN">2020-10-12</con:item>
 </con:config>

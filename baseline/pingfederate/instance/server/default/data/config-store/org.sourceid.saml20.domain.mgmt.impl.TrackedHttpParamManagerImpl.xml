@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:config xmlns:con="http://www.sourceid.org/2004/05/config">
-    <con:list name="AllowedTrackedParams"/>
+    <con:list name="AllowedTrackedParams">
+        <con:ListItem>test</con:ListItem>
+        <con:ListItem>ForceAuthn</con:ListItem>
+        <con:ListItem>IsPassive</con:ListItem>
+        <con:ListItem>email</con:ListItem>
+    </con:list>
 </con:config>

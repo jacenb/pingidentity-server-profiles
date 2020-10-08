@@ -5,5 +5,5 @@
     <c:item name="cookie-secure-flag">true</c:item>
     <c:item name="cookie-httponly-flag">true</c:item>
     <c:item name="cookie-max-age">94608000</c:item>
-    <c:item name="cookie-domain"></c:item>
+    <c:item name="cookie-domain"/>
 </c:config>

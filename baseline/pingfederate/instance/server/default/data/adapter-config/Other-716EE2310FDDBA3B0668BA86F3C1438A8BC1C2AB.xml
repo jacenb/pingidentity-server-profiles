@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:AdapterConfiguration isInheritExtendedContractAttributes="false" name="com.pingidentity.pf.datastore.other.RestDataSourceDriver" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
+    <urn:Fields>
+        <urn:Field name="Base URL"/>
+        <urn:Field name="Authentication Method">Basic Authentication</urn:Field>
+        <urn:Field name="Username">Administrator</urn:Field>
+        <urn:Field name="Password">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiQkY1M2tHSEZ2NiIsInZlcnNpb24iOiIxMC4xLjAuOCJ9..8iaoclyBWCFJYhNhzZqWTw.NKtHovBaHIejtCon9dPYug.5ikONP6r941rtp9ry7rp8g</urn:Field>
+        <urn:Field name="OAuth Token Endpoint">https://localhost:9031/as/token.oauth2</urn:Field>
+        <urn:Field name="OAuth Scope">edit</urn:Field>
+        <urn:Field name="Client ID">cc_secret_client</urn:Field>
+        <urn:Field name="Client Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiQkY1M2tHSEZ2NiIsInZlcnNpb24iOiIxMC4xLjAuOCJ9..RwNl2sA-gxFHyUg88KXGsg.jOjf7tY4VMaejhDbZmb2hg.X7XslJ3Ls6dIIisAMQXl9A</urn:Field>
+        <urn:Field name="Enable HTTPS Hostname Verification">true</urn:Field>
+        <urn:Field name="Read Timeout (ms)">10000</urn:Field>
+        <urn:Field name="Connection Timeout (ms)">10000</urn:Field>
+        <urn:Field name="Max Payload Size (KB)">1024</urn:Field>
+        <urn:Field name="Retry Request">true</urn:Field>
+        <urn:Field name="Maximum Retries Limit">5</urn:Field>
+        <urn:Field name="Retry Error Codes">429</urn:Field>
+        <urn:Field name="Test Connection URL"/>
+    </urn:Fields>
+    <urn:AdvancedFields>
+        <urn:Field name="Enable HTTPS Hostname Verification">true</urn:Field>
+        <urn:Field name="Read Timeout (ms)">10000</urn:Field>
+        <urn:Field name="Connection Timeout (ms)">10000</urn:Field>
+        <urn:Field name="Max Payload Size (KB)">1024</urn:Field>
+        <urn:Field name="Retry Request">true</urn:Field>
+        <urn:Field name="Maximum Retries Limit">5</urn:Field>
+        <urn:Field name="Retry Error Codes">429</urn:Field>
+        <urn:Field name="Test Connection URL"/>
+    </urn:AdvancedFields>
+    <urn:Tables>
+        <urn:Table name="Base URLs and Tags">
+            <urn:Row defaultRow="true">
+                <urn:Field name="Base URL">https://localhost:9999/pf-admin-api/v1</urn:Field>
+                <urn:Field name="Tags"/>
+            </urn:Row>
+        </urn:Table>
+        <urn:Table name="HTTP Request Headers">
+            <urn:Row defaultRow="false">
+                <urn:Field name="Header Name">X-Xsrf-Header</urn:Field>
+                <urn:Field name="Header Value">PingFederate</urn:Field>
+            </urn:Row>
+        </urn:Table>
+        <urn:Table name="Attributes">
+            <urn:Row defaultRow="false">
+                <urn:Field name="Local Attribute">version</urn:Field>
+                <urn:Field name="JSON Response Attribute Path">/version</urn:Field>
+            </urn:Row>
+            <urn:Row defaultRow="false">
+                <urn:Field name="Local Attribute">AdapterId</urn:Field>
+                <urn:Field name="JSON Response Attribute Path">/pluginDescriptorRef/id</urn:Field>
+            </urn:Row>
+        </urn:Table>
+    </urn:Tables>
+</urn:AdapterConfiguration>

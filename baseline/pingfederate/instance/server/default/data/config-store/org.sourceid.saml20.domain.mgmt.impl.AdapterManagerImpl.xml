@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:config xmlns:con="http://www.sourceid.org/2004/05/config">
     <con:map name="IdpAuthnAdapterInstances">
-        <con:item name="HTMLFormPD">com.pingidentity.adapters.htmlform.idp.HtmlFormIdpAuthnAdapter</con:item>
+        <con:item name="HTMLFormSimplePCV">com.pingidentity.adapters.htmlform.idp.HtmlFormIdpAuthnAdapter</con:item>
+        <con:item name="Azure">com.pingidentity.adapters.htmlform.idp.HtmlFormIdpAuthnAdapter</con:item>
+        <con:item name="IDPOTK">com.pingidentity.adapters.opentoken.IdpAuthnAdapter</con:item>
+    </con:map>
+    <con:map name="SpAuthnAdapterInstances">
+        <con:item name="Apache331">com.pingidentity.adapters.opentoken.SpAuthnAdapter</con:item>
+        <con:item name="SPOTK">com.pingidentity.adapters.opentoken.SpAuthnAdapter</con:item>
     </con:map>
     <con:map name="IdpAdapterInstanceParents"/>
 </con:config>

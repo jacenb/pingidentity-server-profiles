@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>PingAccess - Quickstart</title>
+	<link rel="shortcut icon" type="image/x-icon" href="$contextPath/assets/images/favicon.ico">
+	<link rel="stylesheet" media="all" type="text/css" href="$contextPath/assets/css/ping-main.css" />
+	<script type="text/javascript" src="$contextPath/assets/scripts/jquery-1.11.1.min.js"></script>
+
+</head>
+
+<body>
+
+<div id="ping-container">
+
+	<div id="ping-header-container">
+		<div id="ping-header">
+
+			<div id="ping-logo-container">
+				<img class="ping-logo" src="$contextPath/assets/images/logo-ping-identity.png" width="45" height="45" />
+				<img class="ping-access-logo" src="$contextPath/assets/images/logo-ping-access.png" width="94" height="22" />
+			</div>
+
+			<ul id="ping-nav">
+				<li><a href="$contextPath/"><img class="ping-home-icon" src="$contextPath/assets/images/icon-home.png" width="17" height="20" /></a></li>
+				#if ($username && $username != "")
+					<li><a href="$pfHost/idp/startSLO.ping?TargetResource=$paHost$contextPath/" class="ping-sign-off">Sign Off ($username)</a></li>
+  	  	        #end
+			</ul>
+
+		</div>
+	</div>
+
+	<div id="ping-content">		 
+
+		<h2>Welcome to the PingAccess Quick-Start</h2>
+
+		<div id="ping-intro-text" class="ping-access-home">
+		Use this interactive Quick-Start application to explore how the PingAccess solution can work for your organization.
+		</div>
+
+		<div class="ping-card-container">
+
+			<div class="ping-card ping-left">
+				<img class="card-icon" src="$contextPath/assets/images/icon-web-access-management.png" width="250" height="246" />
+				<div class="ping-title">Web Access Management</div>
+				<div class="ping-body">Centralize the authorization and session management of your protected web applications. Using the OpenID Connect protocol, PingAccess leverages a PingFederate server for authentication and attribute resolution. Session management at the application level is handled via a cookie using an open standard format called JSON Web Token (JWT). Run a test request to get a demonstration of basic web resource protection.</div>
+				<button id="ping-wam" class="ping-access-button">Try It Now</button>
+			</div>
+
+			<div class="ping-card ping-right">
+				<img class="card-icon" src="$contextPath/assets/images/icon-api-access-management.png" width="250" height="248" />
+				<div class="ping-title">API Access Management</div>
+				<div class="ping-body">Paired with PingFederate, PingAccess provides a secure method of controlling access to APIs while integrating them with existing identity management infrastructure. PingFederate acts as an OAuth Authorization Server to manage application clients and API token lifecycles, while PingAccess acts as the OAuth Resource Server to validate tokens and apply policies. To get a demonstration of a complete OAuth client interaction, try it now.</div>
+				<button id="ping-aam" class="ping-access-button">Try It Now</button>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div id="ping-footer">
+		<div id="ping-copyright">&copy; 2003-2019 Ping Identity Corporation</div>
+	</div>
+
+</div>
+
+<script>
+// initialise the page.
+$(document).ready(function() {
+	$('#ping-wam').on('click', function (e) {
+		e.preventDefault();
+		document.location = '$contextPath/headers'
+	});
+	$('#ping-aam').on('click', function (e) {
+		e.preventDefault();
+		document.location = '$contextPath/api-demo'
+	});
+	// replacement for flex css, which isn't supported w ie9
+	var highestCol = Math.max($('.ping-card.ping-left').height(), $('.ping-card.ping-right').height());
+	$('.ping-card').height(highestCol);
+});
+</script>
+
+</body>
+</html>

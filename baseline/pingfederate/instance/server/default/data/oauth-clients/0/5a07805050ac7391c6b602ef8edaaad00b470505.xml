@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:Clients xmlns:urn="urn:pingidentity.com:pf:oauth:client">
+    <urn:Client client_id="Apache24" name="Apache24" secret="BhC_NjWPNbVK9doy2u5jsJPUFKI_hy0j_5_G0egK-qo.IFUqD58W.2" persistentGrantExpirationTime="0" enabled="true" lastModified="2020-05-08T14:22:51.997-06:00" bypassApprovalPage="true" restrictScopes="false" clientAuthnType="SECRET" enforceOneTimeJWT="false" isRequireSignedRequest="false">
+        <urn:Description>PA Aapche 2.4 Agent</urn:Description>
+        <urn:Grant type="authorization_code"/>
+        <urn:RedirectUri>http://localhost:8080/pa/oidc/cb</urn:RedirectUri>
+        <urn:RedirectUri>http://192.168.64.4:8080/pa/oidc/cb</urn:RedirectUri>
+        <urn:RedirectUri>http://laptop.demo.com:8080/pa/oidc/cb</urn:RedirectUri>
+        <urn:SupplementalInfo key="DEVICE_FLOW_SETTING" value="SERVER_DEFAULT"/>
+        <urn:SupplementalInfo key="PAIRWISE_USER_TYPE" value="false"/>
+        <urn:SupplementalInfo key="RESTRICT_RESPONSE_TYPES" value="false"/>
+        <urn:SupplementalInfo key="PING_ACCESS_LOGOUT_CAPABLE" value="true"/>
+        <urn:SupplementalInfo key="pf_ecm_ServiceLevel_00" value="Platinum"/>
+        <urn:SupplementalInfo key="REQUIRE_PROOF_KEY_FOR_CODE_EXCHANGE" value="false"/>
+        <urn:SupplementalInfo key="ACCESS_SESSION_REVOCATION_API" value="false"/>
+        <urn:SupplementalInfo key="PERSISTENT_GRANT_IDLE_TIMEOUT_TYPE" value="SERVER_DEFAULT"/>
+        <urn:SupplementalInfo key="VALIDATE_USING_ALL_ELIGIBLE_ATMS" value="false"/>
+        <urn:SupplementalInfo key="ENABLED" value="true"/>
+    </urn:Client>
+</urn:Clients>

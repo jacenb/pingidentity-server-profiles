@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:PluginConfiguration isInheritExtendedContractAttributes="false" name="UserPass" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
+    <urn:Fields/>
+    <urn:AdvancedFields/>
+    <urn:Tables>
+        <urn:Table name="Users">
+            <urn:Row>
+                <urn:Field name="Username">joe</urn:Field>
+                <urn:Field name="Password">sPug7mX5BzM2dkeemXc9-EJafqo7rcAsMmG3LE43v-U.HOnbxD-U.2</urn:Field>
+                <urn:Field name="Confirm Password">5gMObaEuHI8KPbJa6TnuJPiTsOqGpf-wTQPK31n0mVw.fXrOZF32.2</urn:Field>
+            </urn:Row>
+            <urn:Row>
+                <urn:Field name="Username">sarah</urn:Field>
+                <urn:Field name="Password">QhO989wNAWEY9BHdGN3VT1oRXJ3D0X25YkrvRlEa2Bc.EWAC5R3x.2</urn:Field>
+                <urn:Field name="Confirm Password">0X30sYAFp-Kl9y4U0q0-8MwSr_fBLTTW7nCpNtoWMfA.neNVjaeM.2</urn:Field>
+            </urn:Row>
+            <urn:Row>
+                <urn:Field name="Username">scott</urn:Field>
+                <urn:Field name="Password">7wuZq50ZDk2t43jpzHVps7pzmq3-OFZMUq6K8SaRS7I.6jcN3BNs.2</urn:Field>
+                <urn:Field name="Confirm Password">W6IGKMf1ISSUqiCtJrBZgKh3mNXU-44K0E2R8TwcEBc.yvEPSlge.2</urn:Field>
+            </urn:Row>
+        </urn:Table>
+    </urn:Tables>
+</urn:PluginConfiguration>

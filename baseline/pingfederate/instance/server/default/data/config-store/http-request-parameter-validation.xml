@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <con:config xmlns:con="http://www.sourceid.org/2004/05/config">
     <con:map name="idp">
         <con:item name="EntityIdValidator"/>
@@ -76,5 +75,8 @@
     </con:map>
     <con:map name="RequestedFormat">
         <con:item name="UriValidator"/>
+    </con:map>
+    <con:map name="client_id">
+        <con:item name="LengthValidator">256</con:item>
     </con:map>
 </con:config>

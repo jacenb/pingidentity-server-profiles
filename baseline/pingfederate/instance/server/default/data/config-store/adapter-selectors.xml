@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:config xmlns:con="http://www.sourceid.org/2004/05/config">
+    <con:map name="adapter-selectors">
+        <con:item name="APC">com.pingidentity.pf.selectors.oauthscope.OAuthScopeAdapterSelector</con:item>
+        <con:item name="IDPSample">com.pingidentity.pf.selectors.http.HttpRequestParamAuthnSelector</con:item>
+        <con:item name="PAFlow">com.pingidentity.pf.selectors.oauthclient.OAuthClientAdapterSelector</con:item>
+    </con:map>
+    <con:map name="adapter-selectors-parents"/>
+</con:config>

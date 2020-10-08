@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>PingAccess - Quickstart</title>
+	<link rel="shortcut icon" type="image/x-icon" href="$contextPath/assets/images/favicon.ico">
+	<link rel="stylesheet" media="all" type="text/css" href="$contextPath/assets/css/ping-main.css" />
+	<script type="text/javascript" src="$contextPath/assets/scripts/jquery-1.11.1.min.js"></script>
+
+</head>
+
+<body>
+
+<div id="ping-container">
+
+	<div id="ping-header-container">
+		<div id="ping-header">
+
+			<div id="ping-logo-container">
+				<img class="ping-logo" src="$contextPath/assets/images/logo-ping-identity.png" width="45" height="45" />
+				<img class="ping-access-logo" src="$contextPath/assets/images/logo-ping-access.png" width="94" height="22" />
+			</div>
+
+			<ul id="ping-nav">
+				<li><a href="$contextPath/"><img class="ping-home-icon" src="$contextPath/assets/images/icon-home.png" width="17" height="20" /></a></li>
+				#if ($username && $username != "")
+					<li><a href="$pfHost/idp/startSLO.ping?TargetResource=$paHost$contextPath/" class="ping-sign-off">Sign Off ($username)</a></li>
+  	  	        #end
+			</ul>
+
+		</div>
+	</div>
+
+	<div id="ping-content">		 
+
+		<h2>Quick-Start</h2>
+
+		<h3>API Access Management</h3>
+
+		<div id="ping-intro-text">
+		Here, you can test a simple OAuth client for API access management. First, get an OAuth access token using the implicit grant type designed for browser-based clients. Then, use the token to call a protected API.
+		</div>
+
+		<div class="ping-data">
+
+		<h3>Step 1: <span>Get Access Token</span></h3>
+
+		<div class="ping-body">Enter the desired scopes with a space between each to request an access token (the "edit" scope is a default policy requirement):</div>
+    		<form name="input" action="$pfHost/as/authorization.oauth2" method="get">
+			<input type="hidden" name="client_id" value="api_implicit"/>
+    		<input type="hidden" name="response_type" value="token"/>
+            <input id="redirectUri" type="hidden" name="redirect_uri" value=""/>
+			<input id="scope" class="ping-access-input" name="scope" type="text" placeholder="Scopes" value="edit"/>
+			<button id="ping-request-auth" class="ping-access-button">Get Token</button>
+			</form>
+            <script type="text/javascript">
+                jQuery("#redirectUri").val(window.location.href);
+				var accessToken;
+				if (window.location.hash)
+            	{
+            	    document.write("<h4>Parameters received via URL fragment</h4>");
+            	    document.write("<table class=\"ping-data-table\">");
+            	    document.write("<thead><tr><th class=\"ping-200\">Parameter</th><th class=\"ping-400\">Value</th></tr></thead>");
+            	    
+            	    var params = (window.location.hash.substr(1)).split("&");
+					
+            	    for (i = 0; i < params.length; i++)
+            	    {
+            	        var pair = params[i].split("=");
+            	        document.write("<tr><td class=\"ping-200\">" + pair[0] + "</td><td class=\"ping-400\">" + pair[1] + "</td></tr>");
+            	        
+            	        if (pair[0] == "access_token")
+            	        {
+            	            accessToken = pair[1];		                        		                        
+            	        }
+            	    }
+            	    
+            	    document.write("</table>");
+            	}
+			</script>
+
+			<h3>Step 2: <span>Send API Request</span></h3>
+
+			<div class="ping-body">Enter the access token and the URL of the API to securely call an OAuth-protected API.</div>
+
+			<input id="ping-access-token" class="ping-access-input ping-break" name="ping-access-token" type="text" placeholder="Access Token" /><br/>
+			<input id="ping-api-url" class="ping-access-input" name="ping-api-url" type="text" placeholder="API URL" />
+			<button id="ping-get-request" class="ping-access-button">Send API Request</button>
+			<div id="result"></div>
+			<script type="text/javascript">
+				if (accessToken != null) {
+					jQuery("#ping-access-token").val(accessToken);
+					jQuery("#ping-api-url").val("/PingAccessQuickStart/api/headers");
+				}
+					   		
+				jQuery('#ping-get-request').click(function() {
+					jQuery('#result').text('');				
+					jQuery.ajax({
+						type : "GET",
+						dataType : "json",
+						//xhrFields : {
+						//	withCredentials: true
+						//},
+						//crossDomain : true,
+						url : jQuery("#ping-api-url").val(),
+						//url : "https://apache.com:3000/PingAccessQuickStart/api/headers",
+						success : function(data,status,xhr) {
+							jQuery("#result").append("<div class=\"ping-data-header first\">Response Code: <span>"+xhr.status+"</span></div>");
+							jQuery("#result").append("<div class=\"ping-data-header\">Response Headers:</div>");
+							jQuery("#result").append("<textarea id=\"responseHeader\" maxlength=\"500\" rows=\"6\" type=\"text\" class=\"ping-data-textarea\" tabindex=\"6\"/>");
+							jQuery("#responseHeader").append(xhr.getAllResponseHeaders());
+							jQuery("#responseHeader").height(jQuery("#responseHeader")[0].scrollHeight );
+							jQuery('#result').append("<div class=\"ping-data-header\">Response Body:</div>");
+							jQuery('#result').append("<textarea id=\"jsonData\" maxlength=\"500\" rows=\"6\" type=\"text\" class=\"ping-data-textarea\" tabindex=\"6\"/>");
+							jQuery('#jsonData').append(JSON.stringify(data, null, 4));																
+							jQuery("#jsonData").height(jQuery("#jsonData")[0].scrollHeight );
+						},
+						statusCode : {
+							401 : function(data,status,xhr) {
+								jQuery("#result").append("<div class=\"ping-data-header first\">Response Code: <span>401</span></div>");
+								jQuery('#result').append("<div class=\"ping-data-header\">Response Body:</div>");
+								jQuery('#result').append("<textarea id=\"jsonData\" maxlength=\"500\" rows=\"6\" type=\"text\" class=\"ping-data-textarea\" tabindex=\"6\"/>");
+								jQuery('#jsonData').append(JSON.stringify(data, null, 4));
+								jQuery("#jsonData").height(jQuery("#jsonData")[0].scrollHeight );
+							},
+							403 : function(data,status,xhr) {
+								jQuery("#result").append("<div class=\"ping-data-header first\">Response Code: <span>403</span></div>");
+								jQuery('#result').append("<div class=\"ping-data-header\">Response Body:</div>");
+								jQuery('#result').append("<textarea id=\"jsonData\" maxlength=\"500\" rows=\"6\" type=\"text\" class=\"ping-data-textarea\" tabindex=\"6\"/>");
+								jQuery('#jsonData').append(JSON.stringify(data, null, 4));
+								jQuery("#jsonData").height(jQuery("#jsonData")[0].scrollHeight );
+							},
+							404 : function(data,status,xhr) {
+								jQuery("#result").append("<div class=\"ping-data-header first\">Response Code: <span>404</span></div>");
+								jQuery('#result').append("<div class=\"ping-data-header\">Response Body:</div>");
+								jQuery('#result').append("<textarea id=\"jsonData\" maxlength=\"500\" rows=\"6\" type=\"text\" class=\"ping-data-textarea\" tabindex=\"6\"/>");
+								jQuery('#jsonData').append(JSON.stringify(data, null, 4));
+								jQuery("#jsonData").height(jQuery("#jsonData")[0].scrollHeight );
+							}
+						},
+						beforeSend: function(xhr, settings) { 
+							if (jQuery("#ping-access-token").val()) {								
+								xhr.setRequestHeader('Authorization','Bearer ' + jQuery("#ping-access-token").val());
+							}								 
+						}
+					});
+				});				    	
+			</script>
+
+			<button id="ping-get-oidc" class="ping-access-button">Get OIDC Config</button>
+			<div id="result"></div>
+			<script type="text/javascript">
+				jQuery('#ping-get-oidc').click(function() {
+					jQuery('#result').text('');				
+					jQuery.ajax({
+						type : "GET",
+						dataType : "json",
+						url : "https://localhost:9031/.well-known/openid-configuration",
+						success : function(data,status,xhr) {
+							jQuery("#result").append("<div class=\"ping-data-header first\">Response Code: <span>"+xhr.status+"</span></div>");
+							jQuery("#result").append("<div class=\"ping-data-header\">Response Headers:</div>");
+							jQuery("#result").append("<textarea id=\"responseHeader\" maxlength=\"500\" rows=\"6\" type=\"text\" class=\"ping-data-textarea\" tabindex=\"6\"/>");
+							jQuery("#responseHeader").append(xhr.getAllResponseHeaders());
+							jQuery("#responseHeader").height(jQuery("#responseHeader")[0].scrollHeight );
+							jQuery('#result').append("<div class=\"ping-data-header\">Response Body:</div>");
+							jQuery('#result').append("<textarea id=\"jsonData\" maxlength=\"500\" rows=\"6\" type=\"text\" class=\"ping-data-textarea\" tabindex=\"6\"/>");
+							jQuery('#jsonData').append(JSON.stringify(data, null, 4));																
+							jQuery("#jsonData").height(jQuery("#jsonData")[0].scrollHeight );
+						},
+						statusCode : {
+							401 : function(data,status,xhr) {
+								jQuery("#result").append("<div class=\"ping-data-header first\">Response Code: <span>401</span></div>");
+								jQuery('#result').append("<div class=\"ping-data-header\">Response Body:</div>");
+								jQuery('#result').append("<textarea id=\"jsonData\" maxlength=\"500\" rows=\"6\" type=\"text\" class=\"ping-data-textarea\" tabindex=\"6\"/>");
+								jQuery('#jsonData').append(JSON.stringify(data, null, 4));
+								jQuery("#jsonData").height(jQuery("#jsonData")[0].scrollHeight );
+							},
+							403 : function(data,status,xhr) {
+								jQuery("#result").append("<div class=\"ping-data-header first\">Response Code: <span>403</span></div>");
+								jQuery('#result').append("<div class=\"ping-data-header\">Response Body:</div>");
+								jQuery('#result').append("<textarea id=\"jsonData\" maxlength=\"500\" rows=\"6\" type=\"text\" class=\"ping-data-textarea\" tabindex=\"6\"/>");
+								jQuery('#jsonData').append(JSON.stringify(data, null, 4));
+								jQuery("#jsonData").height(jQuery("#jsonData")[0].scrollHeight );
+							},
+							404 : function(data,status,xhr) {
+								jQuery("#result").append("<div class=\"ping-data-header first\">Response Code: <span>404</span></div>");
+								jQuery('#result').append("<div class=\"ping-data-header\">Response Body:</div>");
+								jQuery('#result').append("<textarea id=\"jsonData\" maxlength=\"500\" rows=\"6\" type=\"text\" class=\"ping-data-textarea\" tabindex=\"6\"/>");
+								jQuery('#jsonData').append(JSON.stringify(data, null, 4));
+								jQuery("#jsonData").height(jQuery("#jsonData")[0].scrollHeight );
+							}
+						},
+					});
+				});				    	
+			</script>
+			
+		</div>
+
+	</div>
+
+	<div id="ping-footer">
+		<div id="ping-copyright">&copy; 2003-2019 Ping Identity Corporation</div>
+	</div>
+
+</div>
+
+</body>
+</html>

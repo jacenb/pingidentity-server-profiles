@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:Clients xmlns:urn="urn:pingidentity.com:pf:oauth:client">
+    <urn:Client client_id="jwt_request" name="jwt_request" logo="" persistentGrantExpirationTime="0" enabled="true" lastModified="2019-11-01T10:15:17.616-06:00" bypassApprovalPage="false" restrictScopes="false" jwksUri="" jwks="{     &quot;keys&quot;:[        {           &quot;kty&quot;:&quot;RSA&quot;,          &quot;kid&quot;:&quot;k1&quot;,          &quot;n&quot;:&quot;w0wHL2-NidcFB9QMOw9LSSnwLpfbEmwi85zCe5V-5PGJF0Np228m3kP8zTFX047m2AVpeLiFBwGaKLRX-76nAuvTWn-S9oCagdt_SRHDw0t_4iPD-PeAQ24uF6zby-mzqNeZsY2Er8nrUZFSVDW_wHfOGhbbLTrrO96I4II5EAopdqlIyUebJ3lzvjKiz26fQ2V-UIkUez4RQaCX8OoDz1XUFL-gz5KgJD2EE1v4vEwUNQx1-vAWTg2HpAbP4cJd8i3fwZrKUgZDJw0prbLZfxeQya04Txq2IRqm6d1_eRhaxaPBLY51EvOx66Coxikyh5cvXlbSvKPOK--ygSXckw&quot;,          &quot;e&quot;:&quot;AQAB&quot;       }    ] }" clientAuthnType="NONE" enforceOneTimeJWT="false" isRequireSignedRequest="true">
+        <urn:Description>Hybrid Flow, JWT Requst Object</urn:Description>
+        <urn:Grant type="implicit"/>
+        <urn:Grant type="authorization_code"/>
+        <urn:RedirectUri>https://localhost:9031/OAuthPlayground/authorization_code/callback</urn:RedirectUri>
+        <urn:SupplementalInfo key="ALLOW_EXCLUSIVE_SCOPES" value="false"/>
+        <urn:SupplementalInfo key="DEVICE_FLOW_SETTING" value="SERVER_DEFAULT"/>
+        <urn:SupplementalInfo key="PING_ACCESS_LOGOUT_CAPABLE" value="false"/>
+        <urn:SupplementalInfo key="RESTRICT_RESPONSE_TYPES" value="false"/>
+        <urn:SupplementalInfo key="REQUIRE_PROOF_KEY_FOR_CODE_EXCHANGE" value="false"/>
+        <urn:SupplementalInfo key="ACCESS_SESSION_REVOCATION_API" value="false"/>
+        <urn:SupplementalInfo key="PERSISTENT_GRANT_IDLE_TIMEOUT_TYPE" value="SERVER_DEFAULT"/>
+        <urn:SupplementalInfo key="VALIDATE_USING_ALL_ELIGIBLE_ATMS" value="false"/>
+        <urn:SupplementalInfo key="ENABLED" value="true"/>
+    </urn:Client>
+</urn:Clients>

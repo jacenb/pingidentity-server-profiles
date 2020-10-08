@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c2c:c2cContract id="RWMFXmWI7C7jCdpe" name="AuthNRequest" xmlns:c2c="http://pingidentity.com/2014/10/c2cContracts">
+    <c2c:extendedAttributes>
+        <c2c:attr name="IsPassive"/>
+        <c2c:attr name="mail"/>
+        <c2c:attr name="givenName"/>
+        <c2c:attr name="DN"/>
+        <c2c:attr name="memberOf"/>
+        <c2c:attr name="sn"/>
+        <c2c:attr name="ForceAuthn"/>
+    </c2c:extendedAttributes>
+</c2c:c2cContract>

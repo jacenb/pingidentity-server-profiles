@@ -2,13 +2,20 @@
 <urn:AccessTokenManagerConfiguration inheritAccessControlSettings="false" inheritSelectionSettings="false" inheritSessionValidationSettings="false" restrictClients="false" checkSessionRevocationStatus="false" checkValidAuthnSession="false" updateAuthnSessionActivity="false" defaultSubjectAttribute="" isInheritExtendedContractAttributes="false" name="JSON Web Tokens" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
     <urn:Fields>
         <urn:Field name="Token Lifetime">120</urn:Field>
-        <urn:Field name="JWS Algorithm">RS256</urn:Field>
+        <urn:Field name="JWS Algorithm">RS512</urn:Field>
         <urn:Field name="Active Symmetric Key ID"/>
         <urn:Field name="Active Signing Certificate Key ID">k1</urn:Field>
         <urn:Field name="JWE Algorithm"/>
         <urn:Field name="JWE Content Encryption Algorithm"/>
         <urn:Field name="Active Symmetric Encryption Key ID"/>
-        <urn:Field name="Asymmetric Encryption Key"/>
+        <urn:Field name="Asymmetric Encryption Key">{
+  "kty": "RSA",
+  "e": "AQAB",
+  "use": "enc",
+  "kid": "test",
+  "alg": "RS256",
+  "n": "j3IXQ4h4NC5YwYU2Wg-yZk2NFHdCZR5CBDPg3v--HVBEZK_9cLunpV0AHbr5q8lYXDt3sZDha_M9QL3woCPXF4FvUeY7DNeM8id9yBtycUVg-7BNj8hZVy9eGf02n1RlnOWwxV7ejO7j8dDCNMGCiDA8zrUTQ11jPW4Z9vwVkrHcM8GrCJo9e27_gUw3WbtnU4K5XtMUoqA5Tl5ZwYn4hBpm1l2j8Pz0FQ_Z8w6LY4iXKgkhUgO1BYFNbL2Ofn8-GDeH2OlZ9PhANVNsb7lWh1AdSsYecd_rKN--Flary3hobFrkxCjZfDyiJUuoTWsE6KxmtFdoktB7suKdN17i_w"
+}</urn:Field>
         <urn:Field name="Asymmetric Encryption JWKS URL"/>
         <urn:Field name="Include Key ID Header Parameter">true</urn:Field>
         <urn:Field name="Include X.509 Thumbprint Header Parameter">false</urn:Field>
@@ -21,11 +28,12 @@
         <urn:Field name="Issuer Claim Value"/>
         <urn:Field name="Audience Claim Value"/>
         <urn:Field name="JWT ID Claim Length">0</urn:Field>
-        <urn:Field name="Access Grant GUID Claim Name">agid</urn:Field>
+        <urn:Field name="Access Grant GUID Claim Name"/>
         <urn:Field name="JWKS Endpoint Path"/>
         <urn:Field name="JWKS Endpoint Cache Duration">720</urn:Field>
         <urn:Field name="Publish Key ID X.509 URL">false</urn:Field>
         <urn:Field name="Publish Thumbprint X.509 URL">false</urn:Field>
+        <urn:Field name="Expand Scope Groups">false</urn:Field>
     </urn:Fields>
     <urn:AdvancedFields>
         <urn:Field name="Include Key ID Header Parameter">true</urn:Field>
@@ -39,22 +47,24 @@
         <urn:Field name="Issuer Claim Value"/>
         <urn:Field name="Audience Claim Value"/>
         <urn:Field name="JWT ID Claim Length">0</urn:Field>
-        <urn:Field name="Access Grant GUID Claim Name">agid</urn:Field>
+        <urn:Field name="Access Grant GUID Claim Name"/>
         <urn:Field name="JWKS Endpoint Path"/>
         <urn:Field name="JWKS Endpoint Cache Duration">720</urn:Field>
         <urn:Field name="Publish Key ID X.509 URL">false</urn:Field>
         <urn:Field name="Publish Thumbprint X.509 URL">false</urn:Field>
+        <urn:Field name="Expand Scope Groups">false</urn:Field>
     </urn:AdvancedFields>
     <urn:Tables>
         <urn:Table name="Symmetric Keys"/>
         <urn:Table name="Certificates">
             <urn:Row>
                 <urn:Field name="Key ID">k1</urn:Field>
-                <urn:Field name="Certificate">v8m5h9qrw85dgmndgv47k76xz</urn:Field>
+                <urn:Field name="Certificate">ajrijhaata1nimo231vviponq</urn:Field>
             </urn:Row>
         </urn:Table>
     </urn:Tables>
     <urn:ExtendedContractAttributes>
+        <urn:AttributeName>aud</urn:AttributeName>
         <urn:AttributeName>Username</urn:AttributeName>
         <urn:AttributeName>OrgName</urn:AttributeName>
     </urn:ExtendedContractAttributes>

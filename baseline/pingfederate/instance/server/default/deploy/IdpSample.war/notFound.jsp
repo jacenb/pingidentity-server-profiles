@@ -1,0 +1,45 @@
+ <%--
+ *******************************************************************************
+ * Copyright (C) 2010 Ping Identity Corporation All rights reserved.
+ * 
+ * This software is licensed under the Open Software License v2.1 (OSL v2.1).
+ * 
+ * A copy of this license has been provided with the distribution of this
+ * software. Additionally, a copy of this license is available at:
+ * http://www.pingidentity.com/license
+ *  
+ ******************************************************************************
+ --%>
+
+<%@ page language="java" contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import = "com.pingidentity.sample.util.URLUtil" %>
+
+<html>
+	<head>
+	<META http-equiv=Content-Type content="text/html; charset=utf-8">
+	<LINK media=screen href="<%=request.getContextPath()%>/images/main.css" type=text/css rel=stylesheet>
+	<link href="<%=request.getContextPath()%>/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+
+	<title>Java Integration Kit Sample Not Found Page</title>
+	
+	</head>
+<BODY>
+    <div class="body-container">
+        <div id="" class="ping-body-container">
+            <div class="header-block">
+                <div class="header">IdP Not Found Error</div>
+            </div>
+            <div class="error-container">
+                The resource you requested could not be found. Please return with this link:<div style="text-align: center;"><a href="/IdpSample/MainPage">IdP Sample Application</a></div>
+            </div>
+        </div>
+        <div class="ping-footer-container">
+            <div class="ping-footer">
+                <div class="ping-credits"></div>
+                <div class="ping-copyright">Copyright © 2003-2018. Ping Identity Corporation. All rights reserved.</div>
+            </div>
+        </div>
+    </div>
+</BODY>
+
+</HTML>

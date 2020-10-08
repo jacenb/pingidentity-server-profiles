@@ -1,0 +1,18 @@
+/*C4*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C9*/SET SCHEMA PUBLIC
+INSERT INTO PINGFEDERATE_ACCESS_GRANT VALUES('PnojJvebef0zcmfsEUgr2TtD7BmIHxdp','gk46CKU_c4bT-R4MN9gAgr64xK6T2mvK6DoWR-CaT7M','joe','openid profile email phone address','pa_wam','authorization_code','authz_req|HTMLFormSimplePCV','2020-10-08 09:52:22.225000','2020-10-08 09:52:22.225000',NULL)
+COMMIT
+DELETE FROM PINGFEDERATE_ACCESS_GRANT WHERE GUID='PnojJvebef0zcmfsEUgr2TtD7BmIHxdp'
+INSERT INTO PINGFEDERATE_ACCESS_GRANT VALUES('PnojJvebef0zcmfsEUgr2TtD7BmIHxdp','XaOTVNhRa3RLrgdcmvHTBrmZC8DNtCiqMqe5jk0Xq5k','joe','openid profile email phone address','pa_wam','authorization_code','authz_req|HTMLFormSimplePCV','2020-10-08 09:52:22.225000','2020-10-08 09:54:37.375000',NULL)
+COMMIT
+INSERT INTO PINGFEDERATE_ACCESS_GRANT VALUES('4uMvWaafYL1gA6uvLS1oLQzpJFl7lOnn',NULL,'joe','edit','api_implicit','implicit','authz_req|HTMLFormSimplePCV','2020-10-08 09:54:55.203000','2020-10-08 09:54:55.203000',NULL)
+COMMIT
+DELETE FROM PINGFEDERATE_ACCESS_GRANT WHERE GUID='PnojJvebef0zcmfsEUgr2TtD7BmIHxdp'
+INSERT INTO PINGFEDERATE_ACCESS_GRANT VALUES('PnojJvebef0zcmfsEUgr2TtD7BmIHxdp','DmVtDmBM-qw_Y0HreneaKaZzd_J0qAZ_yJ1K-HRETnc','joe','openid profile email phone address','pa_wam','authorization_code','authz_req|HTMLFormSimplePCV','2020-10-08 09:52:22.225000','2020-10-08 09:57:03.289000',NULL)
+COMMIT
+INSERT INTO PINGFEDERATE_ACCESS_GRANT VALUES('PCOBiA34OHvLVmEawG74X5n9cfiaF2uG','o6wpH8vjTBRoOH0o9FdIBgLAeRYnN-cAjCJg1L3Tlzk','joe','','ac_client','authorization_code','authz_req|HTMLFormSimplePCV','2020-10-08 09:59:38.203000','2020-10-08 09:59:38.203000',NULL)
+COMMIT
+DELETE FROM PINGFEDERATE_ACCESS_GRANT WHERE GUID='PnojJvebef0zcmfsEUgr2TtD7BmIHxdp'
+INSERT INTO PINGFEDERATE_ACCESS_GRANT VALUES('PnojJvebef0zcmfsEUgr2TtD7BmIHxdp','pOjddg1yMsBIGSdMLMF7VqOqACnjwGLgYlqKIPcb1ZY','joe','openid profile email phone address','pa_wam','authorization_code','authz_req|HTMLFormSimplePCV','2020-10-08 09:52:22.225000','2020-10-08 09:59:53.861000',NULL)
+COMMIT

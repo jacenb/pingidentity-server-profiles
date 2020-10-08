@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<md:EntityDescriptor entityID="SP:STS" urn:name="SP:STS" ID="Wobr9bQDuZcHHlbhaOGPO4X6TzA" urn:baseUrl="https://localhost" urn:LogLevel="STANDARD" urn:isActive="true" xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:urn="urn:sourceid.org:saml2:metadata-extension:v2">
+    <md:Extensions>
+        <urn:EntityExtension PFVersion="9.2.1.1" LicenseGroup="">
+            <urn:VirtualIdentity EntityID="IDP:STS"/>
+            <urn:DefaultVirtualIdentity EntityID="IDP:STS"/>
+            <urn:DigitialSignatureAliases SigningKeyAlias="ajrijhaata1nimo231vviponq" includeX509inXmlSig="false" includeRawKeyInXmlSig="false" SigningAlgorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+            <urn:Encryption>
+                <urn:EncryptionPolicy EncryptionAlgorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc" KeyTransportAlgorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p" EncryptAssertion="false" EncryptSubjectNameID="false" SLOEncryptSubjectNameID="false"/>
+                <urn:DecryptionPolicy AssertionEncrypted="false" SubjectNameIDEncrypted="false" AttributeEncrypted="false" SLOSubjectNameIDEncrypted="false"/>
+            </urn:Encryption>
+            <urn:ConnectionTemplateProperties/>
+            <urn:MetadataUrlId xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <urn:enableAutoMetadataUpdate>false</urn:enableAutoMetadataUpdate>
+            <urn:AdditionalAllowedEntitiesConfiguration>
+                <urn:AllowAdditionalEntities>false</urn:AllowAdditionalEntities>
+                <urn:AllowAllEntities>false</urn:AllowAllEntities>
+                <urn:AdditionalAllowedEntities/>
+            </urn:AdditionalAllowedEntitiesConfiguration>
+        </urn:EntityExtension>
+    </md:Extensions>
+    <md:RoleDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol" xsi:type="urn:PFSpWsTrustRoleDescriptorType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <md:Extensions>
+            <urn:RoleExtension LastModified="2019-04-15T14:07:16.913-06:00"/>
+        </md:Extensions>
+        <urn:WsTrustSettings>
+            <urn:AppliesTo>https://localhost</urn:AppliesTo>
+            <urn:TokenType>http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV2.0</urn:TokenType>
+            <urn:UseSamlHoK>false</urn:UseSamlHoK>
+            <urn:AbortIfNotFulfilledFromRequest>false</urn:AbortIfNotFulfilledFromRequest>
+            <urn:EncryptAssertion>false</urn:EncryptAssertion>
+            <urn:AssertionValidityBeforeMinutes>5</urn:AssertionValidityBeforeMinutes>
+            <urn:AssertionValidityAfterMinutes>35</urn:AssertionValidityAfterMinutes>
+            <urn:TokenToAssertionMapping pluginId="UsernameTokenProcessor" RestrictVirtualServerIds="false">
+                <urn:AttributeMapping>
+                    <urn:AttributeMap Name="mail" Type="Token" Value="mail"/>
+                    <urn:AttributeMap Name="displayName" Type="Token" Value="displayName"/>
+                    <urn:AttributeMap Name="surname" Type="Token" Value="surname"/>
+                    <urn:AttributeMap Name="givenName" Type="Token" Value="givenName"/>
+                    <urn:AttributeMap Name="memberOf" Type="Token" Value="memberOf"/>
+                    <urn:AttributeMap Name="TOKEN_SUBJECT" Type="Token" Value="userPrincipalName"/>
+                    <urn:AttributeMap Name="userPrincipalName" Type="Token" Value="userPrincipalName"/>
+                    <urn:TokenAuthorizationIssuanceCriteria/>
+                </urn:AttributeMapping>
+            </urn:TokenToAssertionMapping>
+            <urn:ExtendedAttributeContract>
+                <urn:ExtendedAttribute AttributeName="mail" MaskValue="false" Namespace=""/>
+                <urn:ExtendedAttribute AttributeName="displayName" MaskValue="false" Namespace=""/>
+                <urn:ExtendedAttribute AttributeName="surname" MaskValue="false" Namespace=""/>
+                <urn:ExtendedAttribute AttributeName="givenName" MaskValue="false" Namespace=""/>
+                <urn:ExtendedAttribute AttributeName="memberOf" MaskValue="false" Namespace=""/>
+                <urn:ExtendedAttribute AttributeName="userPrincipalName" MaskValue="false" Namespace=""/>
+            </urn:ExtendedAttributeContract>
+            <urn:enableOAuthSamlBearer>false</urn:enableOAuthSamlBearer>
+        </urn:WsTrustSettings>
+    </md:RoleDescriptor>
+    <md:RoleDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol" xsi:type="urn:PFAvailableCertsRoleDescriptorType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    <md:ContactPerson contactType="administrative"/>
+</md:EntityDescriptor>

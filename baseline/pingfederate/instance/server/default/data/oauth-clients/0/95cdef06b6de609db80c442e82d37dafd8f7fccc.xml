@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:Clients xmlns:urn="urn:pingidentity.com:pf:oauth:client">
+    <urn:Client client_id="TestAgent2" name="TestAgent2" secret="DTPrs8-mjz2tfSEXURcHKU770TffdKqCJVmQMile-Qw.xxJPpYsf.2" persistentGrantExpirationTime="-1" persistentGrantExpirationTimeUnit="d" lastModified="2018-05-30T15:16:47.186-06:00" bypassApprovalPage="true" restrictScopes="false" clientAuthnType="SECRET" enforceOneTimeJWT="false" isRequireSignedRequest="false">
+        <urn:Description>Created By :administrator, Created On :2018/05/30 15:16:46</urn:Description>
+        <urn:Grant type="authorization_code"/>
+        <urn:RedirectUri>http://localhost:2222/pa/oidc/cb</urn:RedirectUri>
+        <urn:RedirectUri>https://localhost:2222/pa/oidc/cb</urn:RedirectUri>
+        <urn:SupplementalInfo key="ACCESS_SESSION_REVOCATION_API" value="false"/>
+        <urn:SupplementalInfo key="VALIDATE_USING_ALL_ELIGIBLE_ATMS" value="false"/>
+        <urn:SupplementalInfo key="vnd.ping.policy_group_id" value="TestAgent2"/>
+        <urn:SupplementalInfo key="PING_ACCESS_LOGOUT_CAPABLE" value="true"/>
+        <urn:SupplementalInfo key="RESTRICT_RESPONSE_TYPES" value="false"/>
+    </urn:Client>
+</urn:Clients>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:Clients xmlns:urn="urn:pingidentity.com:pf:oauth:client">
+    <urn:Client client_id="im_oic_client" name="OpenID Connect Implicit Client Profile" logo="" persistentGrantExpirationTime="0" enabled="true" lastModified="2019-11-26T07:25:38.604-07:00" bypassApprovalPage="false" restrictScopes="false" jwksUri="" jwks="" clientAuthnType="NONE" enforceOneTimeJWT="false" isRequireSignedRequest="false">
+        <urn:Description/>
+        <urn:Grant type="implicit"/>
+        <urn:RedirectUri>https://localhost:9031/OAuthPlayground/implicit/oidc/callback</urn:RedirectUri>
+        <urn:RedirectUri>https://localhost:9031/as/authorization.oauth2</urn:RedirectUri>
+        <urn:SupplementalInfo key="ALLOW_EXCLUSIVE_SCOPES" value="false"/>
+        <urn:SupplementalInfo key="DEVICE_FLOW_SETTING" value="SERVER_DEFAULT"/>
+        <urn:SupplementalInfo key="PAIRWISE_USER_TYPE" value="true"/>
+        <urn:SupplementalInfo key="PING_ACCESS_LOGOUT_CAPABLE" value="false"/>
+        <urn:SupplementalInfo key="RESTRICT_RESPONSE_TYPES" value="false"/>
+        <urn:SupplementalInfo key="REQUIRE_PROOF_KEY_FOR_CODE_EXCHANGE" value="false"/>
+        <urn:SupplementalInfo key="SECTOR_IDENTIFIER_URI" value="https://localhost:9031/OAuthPlayground/implicit/oidc/callback"/>
+        <urn:SupplementalInfo key="ACCESS_SESSION_REVOCATION_API" value="false"/>
+        <urn:SupplementalInfo key="PERSISTENT_GRANT_IDLE_TIMEOUT_TYPE" value="SERVER_DEFAULT"/>
+        <urn:SupplementalInfo key="VALIDATE_USING_ALL_ELIGIBLE_ATMS" value="false"/>
+        <urn:SupplementalInfo key="ENABLED" value="true"/>
+        <urn:SupplementalInfo key="vnd.ping.policy_group_id" value="TestAgent"/>
+        <urn:SupplementalInfo key="id_token_signed_response_alg" value="RS256"/>
+    </urn:Client>
+</urn:Clients>

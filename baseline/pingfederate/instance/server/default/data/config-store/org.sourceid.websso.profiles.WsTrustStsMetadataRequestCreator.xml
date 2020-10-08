@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:config xmlns:con="http://www.sourceid.org/2004/05/config">
-
-
     <con:item name="DefaultStsWsdl">sts.xml</con:item>
     <con:item name="DefaultUsernamePolicyTemplate">username.xml</con:item>
-
-    <!--
-        In order to support compatibility across different Microsoft applications
+    <!--In order to support compatibility across different Microsoft applications
         like CRM, Intune, Lync etc. the STS mex metadata is generated out of
         sts.xml and and sts_o365.xml WSDL templates with bindings, definitions,
         ports etc. merged together.
@@ -34,13 +30,10 @@
         Enabled: Use this config value to activate the customization. When set
         to false, just the default template files defined in DefaultStsWsdl and
         DefaultUsernamePolicyTemplate (server/default/conf/template/wsdl/sts.xml
-        and server/default/conf/template/ws-policy/username.xml) will be used.
-    -->
-
+        and server/default/conf/template/ws-policy/username.xml) will be used.-->
     <con:map name="urn:federation:MicrosoftOnline">
-        <con:item name="UsernamePolicyTemplates">username.xml,username_o365.xml</con:item>
-        <con:item name="StsWsdlTemplates">sts_o365.xml,sts_crm.xml,sts.xml</con:item>
+        <con:item name="StsWsdl">sts_o365.xml</con:item>
+        <con:item name="UsernamePolicyTemplate">username_o365.xml</con:item>
         <con:item name="Enabled">true</con:item>
     </con:map>
-
 </con:config>

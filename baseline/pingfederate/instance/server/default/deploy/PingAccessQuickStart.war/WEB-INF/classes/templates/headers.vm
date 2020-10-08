@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>PingAccess - Quickstart</title>
+	<link rel="shortcut icon" type="image/x-icon" href="$contextPath/assets/images/favicon.ico">
+	<link rel="stylesheet" media="all" type="text/css" href="$contextPath/assets/css/ping-main.css" />
+	<script type="text/javascript" src="$contextPath/assets/scripts/jquery-1.11.1.min.js"></script>
+
+</head>
+
+<body>
+
+<div id="ping-container">
+
+	<div id="ping-header-container">
+		<div id="ping-header">
+
+			<div id="ping-logo-container">
+				<img class="ping-logo" src="$contextPath/assets/images/logo-ping-identity.png" width="45" height="45" />
+				<img class="ping-access-logo" src="$contextPath/assets/images/logo-ping-access.png" width="94" height="22" />
+			</div>
+
+			<ul id="ping-nav">
+				<li><a href="$contextPath/"><img class="ping-home-icon" src="$contextPath/assets/images/icon-home.png" width="17" height="20" /></a></li>
+				#if ($username && $username != "")
+					<li><a href="$pfHost/idp/startSLO.ping?TargetResource=$paHost$contextPath/" class="ping-sign-off">Sign Off ($username)</a></li>
+  	  	        #end
+			</ul>
+
+		</div>
+	</div>
+
+	<div id="ping-content">		 
+
+		<h2>Quick-Start</h2>
+
+		<h3>Web Access Management</h3>
+
+		<h4>Your PingAccess test request was received successfully.</h4>
+
+		<div class="ping-data">
+
+			<p class="ping-body">Here is the full set of HTTP request headers received by the protected application:</p>
+			
+			<table class="ping-data-table">
+				<thead>
+					<tr>
+						<th class="ping-200">HTTP Header</th>
+						<th class="ping-400">Value</th>
+					</tr>
+				</thead>
+				<tbody>
+					#foreach ($header in $httpHeaders)
+					<tr>
+						<td class="ping-200">$header.name</td>
+						<td class="ping-400">$header.value</td>
+					</tr>
+					#end
+				</tbody>
+			</table>
+
+		</div>
+
+
+	</div>
+
+	<div id="ping-footer">
+		<div id="ping-copyright">&copy; 2003-2019 Ping Identity Corporation</div>
+	</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:config xmlns:con="http://www.sourceid.org/2004/05/config">
+    <con:list name="sensitive-parameter-names">
+	      <con:ListItem>token</con:ListItem>
+        <con:ListItem>client_secret</con:ListItem>
+        <con:ListItem>password</con:ListItem>
+        <con:ListItem>refresh_token</con:ListItem>
+        <con:ListItem>code</con:ListItem>
+		    <con:ListItem>id_token</con:ListItem>
+    </con:list>
+</con:config>

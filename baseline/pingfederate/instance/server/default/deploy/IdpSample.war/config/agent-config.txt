@@ -1,0 +1,16 @@
+use-verbose-error-messages=false
+http-only=true
+secure-cookie=false
+cookie-path=/
+token-renewuntil=43200
+token-notbefore-tolerance=0
+cookie-domain=
+password=cub2EzLvCQ84T0/MepLEsA==
+token-name=opentoken
+use-cookie=true
+cipher-suite=2
+use-sunjce=false
+session-cookie=false
+token-lifetime=300
+obfuscate-password=true
+track-authntime=true
