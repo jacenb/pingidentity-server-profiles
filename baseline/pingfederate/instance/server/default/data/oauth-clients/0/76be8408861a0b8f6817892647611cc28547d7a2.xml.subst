@@ -4,7 +4,7 @@
         <urn:Description/>
         <urn:Grant type="refresh_token"/>
         <urn:Grant type="authorization_code"/>
-        <urn:RedirectUri>https://localhost:9031/OAuthPlayground/authorization_code/oidc/callback</urn:RedirectUri>
+        <urn:RedirectUri>https://pingfederate-${PING_IDENTITY_K8S_NAMESPACE}.ping-devops.com:9031/OAuthPlayground/authorization_code/oidc/callback</urn:RedirectUri>
         <urn:SupplementalInfo key="ACCESS_SESSION_REVOCATION_API" value="false"/>
         <urn:SupplementalInfo key="REVERSIBLE_SECRET" value="eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiQkY1M2tHSEZ2NiIsInZlcnNpb24iOiI3LjIuMC4yLVNOQVBTSE9UIn0..Rm8grlmNeAfx2uo6tyRT3w.A6NNZKQQBiOirTsGLfKntQTENsiNJdxfgmqqfCt-k-MqVxH_SgZRLyWGBI9CVochmIuIX3qiuc2ay1lHsRiJblhBsm99ABnKw1_ZzMU47OI.8eBW-_zn_UCg7j0Ax5Jetg"/>
         <urn:SupplementalInfo key="ALLOW_EXCLUSIVE_SCOPES" value="false"/>

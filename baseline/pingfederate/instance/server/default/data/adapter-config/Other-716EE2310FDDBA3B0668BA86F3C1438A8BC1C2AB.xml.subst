@@ -5,7 +5,7 @@
         <urn:Field name="Authentication Method">Basic Authentication</urn:Field>
         <urn:Field name="Username">Administrator</urn:Field>
         <urn:Field name="Password">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiQkY1M2tHSEZ2NiIsInZlcnNpb24iOiIxMC4xLjAuOCJ9..8iaoclyBWCFJYhNhzZqWTw.NKtHovBaHIejtCon9dPYug.5ikONP6r941rtp9ry7rp8g</urn:Field>
-        <urn:Field name="OAuth Token Endpoint">https://localhost:9031/as/token.oauth2</urn:Field>
+        <urn:Field name="OAuth Token Endpoint">https://pingfederate-${PING_IDENTITY_K8S_NAMESPACE}.ping-devops.com:9031/as/token.oauth2</urn:Field>
         <urn:Field name="OAuth Scope">edit</urn:Field>
         <urn:Field name="Client ID">cc_secret_client</urn:Field>
         <urn:Field name="Client Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiQkY1M2tHSEZ2NiIsInZlcnNpb24iOiIxMC4xLjAuOCJ9..RwNl2sA-gxFHyUg88KXGsg.jOjf7tY4VMaejhDbZmb2hg.X7XslJ3Ls6dIIisAMQXl9A</urn:Field>
@@ -31,7 +31,7 @@
     <urn:Tables>
         <urn:Table name="Base URLs and Tags">
             <urn:Row defaultRow="true">
-                <urn:Field name="Base URL">https://localhost:9999/pf-admin-api/v1</urn:Field>
+                <urn:Field name="Base URL">https://pingfederate-${PING_IDENTITY_K8S_NAMESPACE}.ping-devops.com:9999/pf-admin-api/v1</urn:Field>
                 <urn:Field name="Tags"/>
             </urn:Row>
         </urn:Table>

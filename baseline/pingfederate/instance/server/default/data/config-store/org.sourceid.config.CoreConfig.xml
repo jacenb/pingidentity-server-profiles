@@ -30,7 +30,7 @@
      authentication, etc. For each item, the name of the item maps
      to the alias of a private key and the value of the item is the
      password to that particular key-->
-    <map name="SslPrivateKeyPasswords"></map>
+    <map name="SslPrivateKeyPasswords"/>
     <!--SSL HSM Keystore information: name and password-->
     <!--Do not modify-->
     <!--Map of SSL client auth keystore aliases to passwords; the system uses this map
@@ -49,8 +49,7 @@
          to the alias of a private key and the value of the item is the
          password to that particular key-->
     <map name="SslServerPrivateKeyPasswords">
-        <item name="6uqpj3hmx4usbvy1qkhi5563z">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiQkY1M2tHSEZ2NiIsInZlcnNpb24iOiI4LjQuMC40LVNOQVBTSE9UIn0..5_BpE3EDUlt5MRSSMZbvSg.1_Khe2wt9EvR2K8pMFwdEw.FxH9fKQ-hAQeSW2uFzg20Q</item>
-        <item name="pchcse34a8369vyx9ieqlaxfp">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiQkY1M2tHSEZ2NiIsInZlcnNpb24iOiI5LjMuMy4zIn0..8VVFv7w-GYeV6UVl8_GPKg.skee7BFV2GlnP_mfyp6LBEJh3D8c1bfO5L75eKeQfR0.tg0cgEiqv_MF1SfK74-UdA</item>
+        <item name="vmgbzd91cuxxdcvovi2kcm6cp">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiQkY1M2tHSEZ2NiIsInZlcnNpb24iOiIxMC4xLjAuOCJ9..vJ_QqCt3Fs7rFYWGADKxRw.Hsb3a42IL5RoUG4I0zJwSWRwDySBybHA07pw2Yy2nHc.p7wMJCg_1RbkzlMERpKmkA</item>
     </map>
     <!--SSL HSM Server Keystore information: name and password-->
     <!--Do not modify-->

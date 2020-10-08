@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urn:Clients xmlns:urn="urn:pingidentity.com:pf:oauth:client">
-    <urn:Client client_id="api_implicit" name="Implicit API Client" logo="" persistentGrantExpirationTime="0" enabled="true" lastModified="2019-07-17T08:03:49.717-06:00" bypassApprovalPage="false" restrictScopes="false" jwksUri="" jwks="" clientAuthnType="NONE" enforceOneTimeJWT="false" isRequireSignedRequest="false">
-        <urn:Description/>
+    <urn:Client client_id="apc" name="APC" logo="" persistentGrantExpirationTime="0" enabled="true" lastModified="2020-01-10T15:27:19.853-07:00" bypassApprovalPage="false" restrictScopes="false" jwksUri="" jwks="" clientAuthnType="NONE" enforceOneTimeJWT="false" isRequireSignedRequest="false">
+        <urn:Description>Authentication Policy Contract Attribute Fulfillment Testing</urn:Description>
         <urn:Grant type="implicit"/>
-        <urn:RedirectUri>https://localhost:3000/PingAccessQuickStart/api-demo</urn:RedirectUri>
-        <urn:RedirectUri>https://localhost:9031/as/authorization.oauth2</urn:RedirectUri>
+        <urn:Grant type="authorization_code"/>
+        <urn:RedirectUri>https://pingfederate-${PING_IDENTITY_K8S_NAMESPACE}.ping-devops.com:9031/OAuthPlayground/authorization_code/oidc/callback</urn:RedirectUri>
         <urn:SupplementalInfo key="ALLOW_EXCLUSIVE_SCOPES" value="false"/>
         <urn:SupplementalInfo key="DEVICE_FLOW_SETTING" value="SERVER_DEFAULT"/>
+        <urn:SupplementalInfo key="DEFAULT_ATM_ID" value="APC"/>
         <urn:SupplementalInfo key="PING_ACCESS_LOGOUT_CAPABLE" value="false"/>
         <urn:SupplementalInfo key="RESTRICT_RESPONSE_TYPES" value="false"/>
         <urn:SupplementalInfo key="REQUIRE_PROOF_KEY_FOR_CODE_EXCHANGE" value="false"/>

@@ -3,11 +3,11 @@
     <urn:Fields>
         <urn:Field name="Password">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiQkY1M2tHSEZ2NiIsInZlcnNpb24iOiIxMC4xLjAuOCJ9..WQ0shF8xxs0ysB8vSeYwXw.B7cKuWZ0Yh1b4NaC2BCwdg.4McsbyjdjLKV8upm1CIuaA</urn:Field>
         <urn:Field name="Confirm Password">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiQkY1M2tHSEZ2NiIsInZlcnNpb24iOiIxMC4xLjAuOCJ9..Cye4FuWtuAX11bduHe7D9w.MjISdnhWUMc4OsuAWrO2CQ.ptSQIRogLQHSlAa-TZYSVA</urn:Field>
-        <urn:Field name="Authentication Service">https://localhost:9031/IdpSample/?cmd=sso</urn:Field>
+        <urn:Field name="Authentication Service">https://pingfederate-${PING_IDENTITY_K8S_NAMESPACE}.ping-devops.com:9031/IdpSample/?cmd=sso</urn:Field>
         <urn:Field name="Transport Mode">1</urn:Field>
         <urn:Field name="Token Name">opentoken</urn:Field>
         <urn:Field name="Cipher Suite">2</urn:Field>
-        <urn:Field name="Logout Service">https://localhost:9031/IdpSample/?cmd=slo</urn:Field>
+        <urn:Field name="Logout Service">https://pingfederate-${PING_IDENTITY_K8S_NAMESPACE}.ping-devops.com:9031/IdpSample/?cmd=slo</urn:Field>
         <urn:Field name="Cookie Domain"/>
         <urn:Field name="Cookie Path">/</urn:Field>
         <urn:Field name="Token Lifetime">300</urn:Field>
@@ -28,7 +28,7 @@
         <urn:Field name="Transport Mode">1</urn:Field>
         <urn:Field name="Token Name">opentoken</urn:Field>
         <urn:Field name="Cipher Suite">2</urn:Field>
-        <urn:Field name="Logout Service">https://localhost:9031/IdpSample/?cmd=slo</urn:Field>
+        <urn:Field name="Logout Service">https://pingfederate-${PING_IDENTITY_K8S_NAMESPACE}.ping-devops.com:9031/IdpSample/?cmd=slo</urn:Field>
         <urn:Field name="Cookie Domain"/>
         <urn:Field name="Cookie Path">/</urn:Field>
         <urn:Field name="Token Lifetime">300</urn:Field>

@@ -10,7 +10,7 @@
         <urn:Field name="JWE Content Encryption Algorithm">A256CBC-HS512</urn:Field>
         <urn:Field name="Active Symmetric Encryption Key ID">gg</urn:Field>
         <urn:Field name="Asymmetric Encryption Key"/>
-        <urn:Field name="Asymmetric Encryption JWKS URL">https://localhost:3000/pa/oauth/JWKS</urn:Field>
+        <urn:Field name="Asymmetric Encryption JWKS URL">https://pingaccess-${PING_IDENTITY_K8S_NAMESPACE}.ping-devops.com/:3000/pa/oauth/JWKS</urn:Field>
         <urn:Field name="Include Key ID Header Parameter">true</urn:Field>
         <urn:Field name="Include X.509 Thumbprint Header Parameter">false</urn:Field>
         <urn:Field name="Default JWKS URL Cache Duration">720</urn:Field>
