@@ -3,7 +3,7 @@
     <urn:Client client_id="im_client" name="Implicit Client" logo="" persistentGrantExpirationTime="0" enabled="true" lastModified="2019-07-17T08:12:20.396-06:00" bypassApprovalPage="false" restrictScopes="false" jwksUri="" jwks="" clientAuthnType="NONE" enforceOneTimeJWT="false" isRequireSignedRequest="false">
         <urn:Description/>
         <urn:Grant type="implicit"/>
-        <urn:RedirectUri>https://pingfederate-${PING_IDENTITY_K8S_NAMESPACE}.ping-devops.com:9031/OAuthPlayground/implicit/callback</urn:RedirectUri>
+        <urn:RedirectUri>https://pingfederate-${PING_IDENTITY_K8S_NAMESPACE}.ping-devops.com/OAuthPlayground/implicit/callback</urn:RedirectUri>
         <urn:SupplementalInfo key="ALLOW_EXCLUSIVE_SCOPES" value="false"/>
         <urn:SupplementalInfo key="DEVICE_FLOW_SETTING" value="SERVER_DEFAULT"/>
         <urn:SupplementalInfo key="PING_ACCESS_LOGOUT_CAPABLE" value="false"/>

@@ -4,7 +4,7 @@
         <urn:Description/>
         <urn:Grant type="refresh_token"/>
         <urn:Grant type="authorization_code"/>
-        <urn:RedirectUri>https://pingfederate-${PING_IDENTITY_K8S_NAMESPACE}.ping-devops.com:9031/OAuthPlayground/authorization_code/callback</urn:RedirectUri>
+        <urn:RedirectUri>https://pingfederate-${PING_IDENTITY_K8S_NAMESPACE}.ping-devops.com/OAuthPlayground/authorization_code/callback</urn:RedirectUri>
         <urn:SupplementalInfo key="ALLOW_EXCLUSIVE_SCOPES" value="false"/>
         <urn:SupplementalInfo key="DEVICE_FLOW_SETTING" value="SERVER_DEFAULT"/>
         <urn:SupplementalInfo key="DEFAULT_ATM_ID" value="default"/>
