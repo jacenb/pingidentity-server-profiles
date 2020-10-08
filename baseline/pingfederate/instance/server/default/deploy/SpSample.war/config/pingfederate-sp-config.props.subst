@@ -3,7 +3,7 @@
 hostPF=https://pingfederate-${PING_IDENTITY_K8S_NAMESPACE}.ping-devops.com
 useSSL=true
 httpPort=9030
-httpsPort=
+#httpsPort=443
 contextPathPF=/
 wsUname=heuristics
 wsPwd=Changeme1
