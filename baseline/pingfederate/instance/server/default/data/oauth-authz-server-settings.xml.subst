@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urn:OAuthConfig enableOAuth="true" authzCodeLength="30" authzCodeTimeout="60" rollRefreshTokens="true" rollingInterval="0" refreshTokenLength="42" selectedPcv="UserPass" atmIdForOAuthGrantManagement="" scopeForOAuthGrantManagement="" globalPersistentGrantExpirationTime="-1" globalPersistentGrantExpirationTimeUnit="d" globalPersistentGrantIdleTimeout="-1" globalPersistentGrantIdleTimeoutTimeUnit="d" tokenEndpointBaseUrl="" userAuthzUrl="" registeredAuthzPath="" pendingAuthzTimeout="600" bypassActivationCodeConfirmation="false" devicePollingInterval="5" authzConsentSetting="" externalConsentAdapterId="" returnedScopeAttributeName="" xmlns:urn="urn:pingidentity.com:pf:oauth:conf">
+    <urn:UserKeyToAccessTokenMapping contextId="default" tokenManagerId="PingIntelligence">
+        <urn1:AttributeMap Name="org" Type="Text" Value="Ping" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="email" Type="Text" Value="testuser@pingidentity.com" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="group" Type="Text" Value="sales" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="username" Type="Persistent Grant" Value="USER_KEY" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+    </urn:UserKeyToAccessTokenMapping>
     <urn:UserKeyToAccessTokenMapping contextId="default" tokenManagerId="default">
         <urn1:AttributeMap Name="Username" Type="Persistent Grant" Value="USER_KEY" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:AttributeMap Name="OrgName" Type="Text" Value="Ping" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>

@@ -11,6 +11,7 @@
         <urn:Field name="Expand Scope Groups">false</urn:Field>
     </urn:Fields>
     <urn:AdvancedFields>
+        <urn:Field name="com.pingidentity.plugin.instanceid">PingIntelligence</urn:Field>
         <urn:Field name="Mode for Synchronous RPC">3</urn:Field>
         <urn:Field name="RPC Timeout">500</urn:Field>
         <urn:Field name="Expand Scope Groups">false</urn:Field>
