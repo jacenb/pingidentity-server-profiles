@@ -18,7 +18,7 @@
     </urn:AdvancedFields>
     <urn:Tables/>
     <urn:ExtendedContractAttributes>
-        <urn:AttributeName>org</urn:AttributeName>
+        <urn:AttributeName>OrgName</urn:AttributeName>
         <urn:AttributeName>email</urn:AttributeName>
         <urn:AttributeName>group</urn:AttributeName>
         <urn:AttributeName>username</urn:AttributeName>
