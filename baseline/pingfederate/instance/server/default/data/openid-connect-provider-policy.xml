@@ -128,7 +128,7 @@
     <urn:ProviderPolicyGroup policyId="PI" idTokenLife="5" includeSriInIdToken="true" includeUserInfoInIdToken="true" includeSHashInIdToken="false" returnIdTokenOnRefreshGrant="false" policyName="PI" accessTokenManagerId="PingIntelligence">
         <urn:UserInfoMapping>
             <urn1:AttributeMap Name="sub" Type="Token" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
-            <urn1:AttributeMap Name="org" Type="Token" Value="org" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="OrgName" Type="Token" Value="OrgName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
             <urn1:AttributeMap Name="email" Type="Token" Value="email" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
             <urn1:AttributeMap Name="group" Type="Text" Value="sales" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
             <urn1:AttributeMap Name="username" Type="Token" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
