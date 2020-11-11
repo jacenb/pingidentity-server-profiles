@@ -22,5 +22,4 @@
         <urn:AttributeName>OrgName</urn:AttributeName>
         <urn:AttributeName>SpAdapter</urn:AttributeName>
     </urn:ExtendedContractAttributes>
-    <urn:ResourceUri>https://pingaccess-${PING_IDENTITY_K8S_NAMESPACE}.ping-devops.com</urn:ResourceUri>
 </urn:AccessTokenManagerConfiguration>
